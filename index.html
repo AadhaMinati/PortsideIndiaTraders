@@ -140,6 +140,31 @@
       color: #004080;
     }
 
+    /* Contact Section Fix for Mobile */
+    #contact p {
+      word-wrap: break-word;
+      text-align: center;
+      padding: 10px;
+    }
+    .contact-container {
+      display: block;
+      text-align: center;
+      font-size: 16px;
+      padding: 20px;
+    }
+
+    /* Mobile Responsiveness */
+    @media screen and (max-width: 600px) {
+      #contact p {
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 5px;
+      }
+      .container {
+        width: 95%;
+      }
+    }
+
     /* Footer */
     footer {
       background: #333;
@@ -152,11 +177,11 @@
 <body>
 
   <!-- Header -->
-   <header>
+  <header>
     <div class="container">
       <div class="logo">
         <img src="Images/FinalLogo.png" alt="Portside India Traders Logo" />
-        <h1></h1>
+        <h1>Portside India Traders</h1>
       </div>
       <nav>
         <ul>
@@ -215,11 +240,11 @@
 
   <!-- Contact Section -->
   <section id="contact">
-    <div class="container">
+    <div class="container contact-container">
       <h2>Contact Us</h2>
       <p>Email: <a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
       <p>Phone: +91 93071 04214</p>
-      <p>Address: I-WING GURUPREM SOCIETY KATRAP <p>BADALPUR MUMBAI SUBURBS </p>421503</p>
+      <p>Address: I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
     </div>
   </section>
 
