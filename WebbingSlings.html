@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portside India Traders - Premium Webbing Slings</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Global Styles */
+    body, h1, h2, h3, p, ul, li, a, section, header, footer {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #004080;
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    
+    section {
+      padding: 40px 0;
+    }
+    
+    /* Header & Navigation */
+    header {
+      background-color: #004080; /* Ocean Blue */
+      color: #fff;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo h1 {
+      font-size: 1.5em;
+      margin: 0;
+      color: white; /* White text as requested */
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    
+    nav ul li {
+      margin-left: 20px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    
+    nav ul li a:hover {
+      color: #ff9800;
+    }
+    
+    /* Hero Section - Solid Color Background */
+    .hero {
+      background: linear-gradient(135deg, #004080, #002b5c);
+      color: white; /* White text as requested */
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
+    }
+    
+    .hero .content {
+      max-width: 800px;
+    }
+    
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+    
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 25px;
+      color: white; /* White text as requested */
+      opacity: 0.9;
+    }
+    
+    .hero .cta {
+      background: #fff;
+      color: #004080;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1.1em;
+      display: inline-block;
+      transition: all 0.3s;
+      margin-top: 20px;
+    }
+    
+    .hero .cta:hover {
+      background: #ff9800;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Section Headings */
+    .section-title {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: #ff9800;
+    }
+    
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+    
+    .feature-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      border-top: 4px solid #004080;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-card i {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    .feature-card h3 {
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    /* Tabs */
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 30px 0;
+      justify-content: center;
+    }
+    
+    .tab-btn {
+      background: #e0e0e0;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+    
+    .tab-btn.active, .tab-btn:hover {
+      background: #004080;
+      color: white;
+    }
+    
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Tables */
+    .sling-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .sling-table th {
+      background: #004080;
+      color: white;
+      padding: 15px;
+      text-align: left;
+      font-weight: 600;
+    }
+    
+    .sling-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .sling-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .sling-table tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    
+    .sling-table tr:hover {
+      background-color: #e3f2fd;
+    }
+    
+    .color-indicator {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin-right: 8px;
+      vertical-align: middle;
+      border: 1px solid #ddd;
+    }
+    
+    /* Notes Section */
+    .note {
+      background: #fff8e1;
+      border-left: 4px solid #ff9800;
+      padding: 25px;
+      border-radius: 5px;
+      margin: 30px 0;
+    }
+    
+    .note h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .note ul {
+      padding-left: 20px;
+    }
+    
+    .note li {
+      margin-bottom: 10px;
+    }
+    
+    /* Contact Section */
+    .contact-card {
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: #e3f2fd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      color: #004080;
+      font-size: 1.2rem;
+    }
+    
+    .contact-info {
+      flex: 1;
+    }
+    
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 30px 0;
+      margin-top: 50px;
+    }
+    
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .sling-table {
+        display: block;
+        overflow-x: auto;
+      }
+      
+      header .container {
+        flex-direction: column;
+      }
+      
+      nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      nav ul li {
+        margin: 5px 10px;
+      }
+      
+      .contact-item {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>Portside India Traders</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="Product1.html">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="content">
+      <h1 style="color: white;">Premium Webbing Slings</h1>
+      <p>High-tenacity polyester slings engineered for maximum safety and durability</p>
+      <a href="#contact" class="cta">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- Product Overview -->
+  <section id="overview">
+    <div class="container">
+      <h2 class="section-title">Webbing Slings Overview</h2>
+      <p>Our webbing slings are manufactured from 100% high-tenacity polyester yarn, offering superior strength and flexibility for a wide range of industrial lifting applications. Designed with safety as the top priority, these slings feature a 1:7 safety factor and are rigorously tested to exceed industry standards.</p>
+      
+      <div class="features">
+        <div class="feature-card">
+          <i class="fas fa-layer-group"></i>
+          <h3>Simplex Slings</h3>
+          <p>Single-layer construction preferred for broad width support. Ideal for straight pull applications with reinforced loops or metal fittings.</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-grip-lines"></i>
+          <h3>Duplex Slings</h3>
+          <p>Double-layer construction for increased strength. Available with reinforced loops or metal end fittings for versatile use.</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-border-all"></i>
+          <h3>Triplex Slings</h3>
+          <p>Triple-layer heavy-duty slings with 1:7 safety factor. Engineered for demanding industrial lifting requirements.</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-th-large"></i>
+          <h3>Quadraplex Slings</h3>
+          <p>Quadruple-layer maximum strength slings for the most challenging lifting applications with exceptional durability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specifications Section -->
+  <section id="specs" style="background-color: #f8f9fa;">
+    <div class="container">
+      <h2 class="section-title">Technical Specifications</h2>
+      <p>All our webbing slings have a safety factor of 1:7. Safe Working Loads (SWL) vary based on lifting configuration.</p>
+      
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="simplex">Simplex Slings</button>
+        <button class="tab-btn" data-tab="duplex">Duplex Slings</button>
+        <button class="tab-btn" data-tab="triplex">Triplex Slings</button>
+        <button class="tab-btn" data-tab="quadraplex">Quadraplex Slings</button>
+      </div>
+      
+      <div id="simplex" class="tab-content active">
+        <table class="sling-table">
+          <thead>
+            <tr>
+              <th>Item Code</th>
+              <th>Width (mm)</th>
+              <th>Color</th>
+              <th>Vertical Lift (kg)</th>
+              <th>Basket Lift (kg)</th>
+              <th>Choker Lift (kg)</th>
+              <th>Min Breaking Load (kg)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>KSF-500</td>
+              <td>25</td>
+              <td><span class="color-indicator" style="background-color: #7e57c2;"></span>Violet</td>
+              <td>500</td>
+              <td>1000</td>
+              <td>400</td>
+              <td>3500</td>
+            </tr>
+            <tr>
+              <td>KSF-1000</td>
+              <td>50</td>
+              <td><span class="color-indicator" style="background-color: #66bb6a;"></span>Green</td>
+              <td>1000</td>
+              <td>2000</td>
+              <td>800</td>
+              <td>7000</td>
+            </tr>
+            <tr>
+              <td>KSF-1500</td>
+              <td>75</td>
+              <td><span class="color-indicator" style="background-color: #ffee58;"></span>Yellow</td>
+              <td>1500</td>
+              <td>3000</td>
+              <td>1200</td>
+              <td>10500</td>
+            </tr>
+            <tr>
+              <td>KSF-2000</td>
+              <td>100</td>
+              <td><span class="color-indicator" style="background-color: #bdbdbd;"></span>Grey</td>
+              <td>2000</td>
+              <td>4000</td>
+              <td>1600</td>
+              <td>14000</td>
+            </tr>
+            <tr>
+              <td>KSF-2500</td>
+              <td>125</td>
+              <td><span class="color-indicator" style="background-color: #ef5350;"></span>Red</td>
+              <td>2500</td>
+              <td>5000</td>
+              <td>2000</td>
+              <td>17500</td>
+            </tr>
+            <tr>
+              <td>KSF-3000</td>
+              <td>150</td>
+              <td><span class="color-indicator" style="background-color: #8d6e63;"></span>Brown</td>
+              <td>3000</td>
+              <td>6000</td>
+              <td>2400</td>
+              <td>21000</td>
+            </tr>
+            <tr>
+              <td>KSF-4000</td>
+              <td>200</td>
+              <td><span class="color-indicator" style="background-color: #42a5f5;"></span>Blue</td>
+              <td>4000</td>
+              <td>8000</td>
+              <td>3200</td>
+              <td>28000</td>
+            </tr>
+            <tr>
+              <td>KSF-5000</td>
+              <td>250</td>
+              <td><span class="color-indicator" style="background-color: #ffa726;"></span>Orange</td>
+              <td>5000</td>
+              <td>10000</td>
+              <td>4000</td>
+              <td>35000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div id="duplex" class="tab-content">
+        <table class="sling-table">
+          <thead>
+            <tr>
+              <th>Item Code</th>
+              <th>Width (mm)</th>
+              <th>Color</th>
+              <th>Vertical Lift (kg)</th>
+              <th>Basket Lift (kg)</th>
+              <th>Choker Lift (kg)</th>
+              <th>Min Breaking Load (kg)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>KDF-1000</td>
+              <td>25</td>
+              <td><span class="color-indicator" style="background-color: #7e57c2;"></span>Violet</td>
+              <td>1000</td>
+              <td>2000</td>
+              <td>800</td>
+              <td>7000</td>
+            </tr>
+            <tr>
+              <td>KDF-2000</td>
+              <td>50</td>
+              <td><span class="color-indicator" style="background-color: #66bb6a;"></span>Green</td>
+              <td>2000</td>
+              <td>4000</td>
+              <td>1600</td>
+              <td>14000</td>
+            </tr>
+            <tr>
+              <td>KDF-3000</td>
+              <td>75</td>
+              <td><span class="color-indicator" style="background-color: #ffee58;"></span>Yellow</td>
+              <td>3000</td>
+              <td>6000</td>
+              <td>2400</td>
+              <td>21000</td>
+            </tr>
+            <tr>
+              <td>KDF-4000</td>
+              <td>100</td>
+              <td><span class="color-indicator" style="background-color: #bdbdbd;"></span>Grey</td>
+              <td>4000</td>
+              <td>8000</td>
+              <td>3200</td>
+              <td>28000</td>
+            </tr>
+            <tr>
+              <td>KDF-5000</td>
+              <td>125</td>
+              <td><span class="color-indicator" style="background-color: #ef5350;"></span>Red</td>
+              <td>5000</td>
+              <td>10000</td>
+              <td>4000</td>
+              <td>35000</td>
+            </tr>
+            <tr>
+              <td>KDF-6000</td>
+              <td>150</td>
+              <td><span class="color-indicator" style="background-color: #8d6e63;"></span>Brown</td>
+              <td>6000</td>
+              <td>12000</td>
+              <td>4800</td>
+              <td>42000</td>
+            </tr>
+            <tr>
+              <td>KDF-8000</td>
+              <td>200</td>
+              <td><span class="color-indicator" style="background-color: #42a5f5;"></span>Blue</td>
+              <td>8000</td>
+              <td>16000</td>
+              <td>6400</td>
+              <td>56000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div id="triplex" class="tab-content">
+        <table class="sling-table">
+          <thead>
+            <tr>
+              <th>Item Code</th>
+              <th>Width (mm)</th>
+              <th>Color</th>
+              <th>Vertical Lift (kg)</th>
+              <th>Basket Lift (kg)</th>
+              <th>Choker Lift (kg)</th>
+              <th>Min Breaking Load (kg)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>KTF-1500</td>
+              <td>25</td>
+              <td><span class="color-indicator" style="background-color: #7e57c2;"></span>Violet</td>
+              <td>1500</td>
+              <td>3000</td>
+              <td>1200</td>
+              <td>10500</td>
+            </tr>
+            <tr>
+              <td>KTF-3500</td>
+              <td>50</td>
+              <td><span class="color-indicator" style="background-color: #66bb6a;"></span>Green</td>
+              <td>3500</td>
+              <td>7000</td>
+              <td>2800</td>
+              <td>24500</td>
+            </tr>
+            <tr>
+              <td>KTF-5500</td>
+              <td>75</td>
+              <td><span class="color-indicator" style="background-color: #ffee58;"></span>Yellow</td>
+              <td>5500</td>
+              <td>11000</td>
+              <td>4400</td>
+              <td>38500</td>
+            </tr>
+            <tr>
+              <td>KTF-7500</td>
+              <td>100</td>
+              <td><span class="color-indicator" style="background-color: #bdbdbd;"></span>Grey</td>
+              <td>7500</td>
+              <td>15000</td>
+              <td>6000</td>
+              <td>52500</td>
+            </tr>
+            <tr>
+              <td>KTF-9500</td>
+              <td>125</td>
+              <td><span class="color-indicator" style="background-color: #ef5350;"></span>Red</td>
+              <td>9500</td>
+              <td>19000</td>
+              <td>7600</td>
+              <td>66500</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div id="quadraplex" class="tab-content">
+        <table class="sling-table">
+          <thead>
+            <tr>
+              <th>Item Code</th>
+              <th>Width (mm)</th>
+              <th>Color</th>
+              <th>Vertical Lift (kg)</th>
+              <th>Basket Lift (kg)</th>
+              <th>Choker Lift (kg)</th>
+              <th>Min Breaking Load (kg)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>KQF-2500</td>
+              <td>25</td>
+              <td><span class="color-indicator" style="background-color: #7e57c2;"></span>Violet</td>
+              <td>2500</td>
+              <td>5000</td>
+              <td>2000</td>
+              <td>17500</td>
+            </tr>
+            <tr>
+              <td>KQF-5000</td>
+              <td>50</td>
+              <td><span class="color-indicator" style="background-color: #66bb6a;"></span>Green</td>
+              <td>5000</td>
+              <td>10000</td>
+              <td>4000</td>
+              <td>35000</td>
+            </tr>
+            <tr>
+              <td>KQF-7500</td>
+              <td>75</td>
+              <td><span class="color-indicator" style="background-color: #ffee58;"></span>Yellow</td>
+              <td>7500</td>
+              <td>15000</td>
+              <td>6000</td>
+              <td>52500</td>
+            </tr>
+            <tr>
+              <td>KQF-10000</td>
+              <td>100</td>
+              <td><span class="color-indicator" style="background-color: #bdbdbd;"></span>Grey</td>
+              <td>10000</td>
+              <td>20000</td>
+              <td>8000</td>
+              <td>70000</td>
+            </tr>
+            <tr>
+              <td>KQF-12500</td>
+              <td>125</td>
+              <td><span class="color-indicator" style="background-color: #ef5350;"></span>Red</td>
+              <td>12500</td>
+              <td>25000</td>
+              <td>10000</td>
+              <td>87500</td>
+            </tr>
+            <tr>
+              <td>KQF-17000</td>
+              <td>150</td>
+              <td><span class="color-indicator" style="background-color: #8d6e63;"></span>Brown</td>
+              <td>17000</td>
+              <td>34000</td>
+              <td>13600</td>
+              <td>119000</td>
+            </tr>
+            <tr>
+              <td>KQF-22500</td>
+              <td>200</td>
+              <td><span class="color-indicator" style="background-color: #42a5f5;"></span>Blue</td>
+              <td>22500</td>
+              <td>45000</td>
+              <td>18000</td>
+              <td>157500</td>
+            </tr>
+            <tr>
+              <td>KQF-25000</td>
+              <td>250</td>
+              <td><span class="color-indicator" style="background-color: #ffa726;"></span>Orange</td>
+              <td>25000</td>
+              <td>50000</td>
+              <td>20000</td>
+              <td>175000</td>
+            </tr>
+            <tr>
+              <td>KQF-30000</td>
+              <td>300</td>
+              <td><span class="color-indicator" style="background-color: #ffa726;"></span>Orange</td>
+              <td>30000</td>
+              <td>60000</td>
+              <td>24000</td>
+              <td>210000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="note">
+        <h3><i class="fas fa-exclamation-circle"></i> Important Notes</h3>
+        <ul>
+          <li>All webbing slings have a safety factor of 1:7</li>
+          <li>Color indicators shown are for reference and may vary based on raw material availability</li>
+          <li>Custom slings up to 50 tons capacity available upon request</li>
+          <li>Always consult manufacturer's test certificate for specific safe working loads</li>
+          <li>Lifting configurations affect SWL - use appropriate mode factors for different applications</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <p><a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Phone</h3>
+            <p>+91 93071 04214</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Address</h3>
+            <p>I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Portside India Traders. All Rights Reserved.</p>
+      <p>Premium Lifting Solutions for Industrial and Maritime Applications</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Tab functionality
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons and content
+          tabBtns.forEach(b => b.classList.remove('active'));
+          document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.remove('active');
+          });
+          
+          // Add active class to clicked button
+          btn.classList.add('active');
+          
+          // Show corresponding content
+          const tabId = btn.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
+        });
+      });
+      
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
