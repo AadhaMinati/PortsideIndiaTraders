@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portside India Traders - Round Slings & Belts</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f5f7fa;
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    
+    /* Header Styles */
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .logo h1 {
+      font-size: 1.5rem;
+      color: white;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    
+    nav a:hover, nav a.active {
+      background: rgba(255,255,255,0.2);
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0, 64, 128, 0.85), rgba(0, 64, 128, 0.9)), 
+                  url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+      height: 400px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .hero-content {
+      max-width: 800px;
+      padding: 20px;
+    }
+    
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+      opacity: 0.95;
+    }
+    
+    .btn {
+      display: inline-block;
+      background: #f39c12;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    
+    .btn:hover {
+      background: #e67e22;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+    
+    /* Product Sections */
+    .section-title {
+      text-align: center;
+      margin: 50px 0 30px;
+      position: relative;
+    }
+    
+    .section-title h2 {
+      font-size: 2.2rem;
+      color: #004080;
+      display: inline-block;
+      padding-bottom: 15px;
+    }
+    
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 4px;
+      background: #f39c12;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    
+    .feature-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #e0e6ed;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    
+    .card-header {
+      background: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .card-body {
+      padding: 25px;
+    }
+    
+    .card-body ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .card-body li {
+      margin-bottom: 10px;
+      position: relative;
+    }
+    
+    .card-body li:before {
+      content: "•";
+      color: #004080;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ddd;
+      flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+      padding: 12px 25px;
+      background: transparent;
+      border: none;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: #2c3e50;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .tab-btn.active {
+      color: #004080;
+    }
+    
+    .tab-btn.active::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: #f39c12;
+    }
+    
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      background: white;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 0.9em;
+    }
+    
+    th {
+      background: #004080;
+      color: white;
+      font-weight: 600;
+      text-align: left;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+    }
+    
+    td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e0e6ed;
+    }
+    
+    tr:last-child td {
+      border-bottom: none;
+    }
+    
+    tr:nth-child(even) {
+      background-color: rgba(0, 64, 128, 0.03);
+    }
+    
+    .specs-table th {
+      text-align: center;
+    }
+    
+    .specs-table td {
+      text-align: center;
+    }
+    
+    .color-indicator {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin-right: 5px;
+      vertical-align: middle;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .note {
+      background: rgba(243, 156, 18, 0.1);
+      border-left: 4px solid #f39c12;
+      padding: 15px;
+      margin: 25px 0;
+      border-radius: 0 4px 4px 0;
+    }
+    
+    .contact-info {
+      background: rgba(0, 64, 128, 0.05);
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      margin-top: 40px;
+      text-align: center;
+    }
+    
+    .contact-info h3 {
+      color: #004080;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #f39c12;
+      display: inline-block;
+    }
+    
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+    
+    .contact-info a {
+      color: #004080;
+      font-weight: bold;
+    }
+    
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 40px 0 20px;
+      margin-top: 50px;
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    
+    .footer-section h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+      color: #f39c12;
+    }
+    
+    .footer-section h3::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background: #f39c12;
+      bottom: 0;
+      left: 0;
+    }
+    
+    .footer-section ul {
+      list-style: none;
+    }
+    
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-section a {
+      color: #ddd;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-section a:hover {
+      color: #f39c12;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    
+    /* Mobile Responsiveness */
+    @media screen and (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+      
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 15px;
+      }
+      
+      nav ul li {
+        margin: 5px;
+      }
+      
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .features {
+        grid-template-columns: 1fr;
+      }
+      
+      .tabs {
+        flex-direction: column;
+      }
+      
+      .tab-btn {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+      }
+      
+      table {
+        font-size: 0.8em;
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <h1>Portside India Traders</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="Product1.html" class="active">Products</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>Premium Round Slings & Belts</h1>
+      <p>High-performance lifting solutions engineered for safety, durability, and maximum efficiency in industrial applications</p>
+      <a href="#contact" class="btn">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- Endless Round Slings Section -->
+  <section id="endless">
+    <div class="container">
+      <div class="section-title">
+        <h2>Endless Round Slings - KR Series</h2>
+      </div>
+      
+      <div class="features">
+        <div class="feature-card">
+          <div class="card-header">
+            <h3>Key Features</h3>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>Lightweight compared to working load ratio</li>
+              <li>Polyester material - no rust or corrosion</li>
+              <li>No danger of hand injury from cut wires</li>
+              <li>Does not spark - safe for explosive environments</li>
+              <li>Low elongation (3%) - absorbs load while lifting</li>
+              <li>Flattens and adjusts to contours for firm grip</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="feature-card">
+          <div class="card-header">
+            <h3>Construction</h3>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>Bearing elements are endlessly laid with high-tenacity polyester fiber strands</li>
+              <li>Protective sleeve made of special heavy-duty polyester fabric</li>
+              <li>SWL increases with number of fiber strands</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="feature-card">
+          <div class="card-header">
+            <h3>Specifications</h3>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>Manufactured slings up to 500 tons on request</li>
+              <li>Factor of safety for webbing: 1:7</li>
+              <li>Colors are indicative and may vary based on material availability</li>
+              <li>Minimum breaking load is 7 times SWL</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="endless-table">Capacity Table</button>
+        <button class="tab-btn" data-tab="endless-notes">Technical Notes</button>
+      </div>
+      
+      <div class="tab-content active" id="endless-table">
+        <table class="specs-table">
+          <thead>
+            <tr>
+              <th>ITEM CODE</th>
+              <th>AVG. DIA (mm)</th>
+              <th>COLOUR</th>
+              <th>VERTICAL (kg)</th>
+              <th>BASKET (kg)</th>
+              <th>CHOKER (kg)</th>
+              <th>45° LIFT (kg)</th>
+              <th>90° LIFT (kg)</th>
+              <th>BREAKING LOAD (kg)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>KR-500</td>
+              <td>15</td>
+              <td><span class="color-indicator" style="background-color: #8A2BE2;"></span> VIOLET</td>
+              <td>500</td>
+              <td>1,000</td>
+              <td>400</td>
+              <td>900</td>
+              <td>700</td>
+              <td>3,500</td>
+            </tr>
+            <tr>
+              <td>KR-1000</td>
+              <td>18</td>
+              <td><span class="color-indicator" style="background-color: #8A2BE2;"></span> VIOLET</td>
+              <td>1,000</td>
+              <td>2,000</td>
+              <td>800</td>
+              <td>1,800</td>
+              <td>1,400</td>
+              <td>7,000</td>
+            </tr>
+            <tr>
+              <td>KR-2000</td>
+              <td>20</td>
+              <td><span class="color-indicator" style="background-color: #228B22;"></span> GREEN</td>
+              <td>2,000</td>
+              <td>4,000</td>
+              <td>1,600</td>
+              <td>3,600</td>
+              <td>2,800</td>
+              <td>14,000</td>
+            </tr>
+            <tr>
+              <td>KR-3000</td>
+              <td>22</td>
+              <td><span class="color-indicator" style="background-color: #FFD700;"></span> YELLOW</td>
+              <td>3,000</td>
+              <td>6,000</td>
+              <td>2,400</td>
+              <td>5,400</td>
+              <td>4,200</td>
+              <td>21,000</td>
+            </tr>
+            <tr>
+              <td>KR-4000</td>
+              <td>25</td>
+              <td><span class="color-indicator" style="background-color: #808080;"></span> GREY</td>
+              <td>4,000</td>
+              <td>8,000</td>
+              <td>3,200</td>
+              <td>7,200</td>
+              <td>5,600</td>
+              <td>28,000</td>
+            </tr>
+            <tr>
+              <td>KR-5000</td>
+              <td>27</td>
+              <td><span class="color-indicator" style="background-color: #FF0000;"></span> RED</td>
+              <td>5,000</td>
+              <td>10,000</td>
+              <td>4,000</td>
+              <td>9,000</td>
+              <td>7,000</td>
+              <td>35,000</td>
+            </tr>
+            <tr>
+              <td>KR-6000</td>
+              <td>32</td>
+              <td><span class="color-indicator" style="background-color: #A52A2A;"></span> BROWN</td>
+              <td>6,000</td>
+              <td>12,000</td>
+              <td>4,800</td>
+              <td>10,800</td>
+              <td>8,400</td>
+              <td>42,000</td>
+            </tr>
+            <tr>
+              <td>KR-8000</td>
+              <td>38</td>
+              <td><span class="color-indicator" style="background-color: #0000FF;"></span> BLUE</td>
+              <td>8,000</td>
+              <td>16,000</td>
+              <td>6,400</td>
+              <td>14,400</td>
+              <td>11,200</td>
+              <td>56,000</td>
+            </tr>
+            <tr>
+              <td>KR-10000</td>
+              <td>46</td>
+              <td><span class="color-indicator" style="background-color: #FFA500;"></span> ORANGE</td>
+              <td>10,000</td>
+              <td>20,000</td>
+              <td>8,000</td>
+              <td>18,000</td>
+              <td>14,000</td>
+              <td>70,000</td>
+            </tr>
+            <tr>
+              <td>KR-12000</td>
+              <td>58</td>
+              <td><span class="color-indicator" style="background-color: #FFA500;"></span> ORANGE</td>
+              <td>12,000</td>
+              <td>24,000</td>
+              <td>9,600</td>
+              <td>21,600</td>
+              <td>16,800</td>
+              <td>84,000</td>
+            </tr>
+            <tr>
+              <td>KR-15000</td>
+              <td>70</td>
+              <td><span class="color-indicator" style="background-color: #FFA500;"></span> ORANGE</td>
+              <td>15,000</td>
+              <td>30,000</td>
+              <td>12,000</td>
+              <td>27,000</td>
+              <td>21,000</td>
+              <td>105,000</td>
+            </tr>
+            <tr>
+              <td>KR-20000</td>
+              <td>78</td>
+              <td><span class="color-indicator" style="background-color: #FFA500;"></span> ORANGE</td>
+              <td>20,000</td>
+              <td>40,000</td>
+              <td>16,000</td>
+              <td>36,000</td>
+              <td>28,000</td>
+              <td>140,000</td>
+            </tr>
+            <tr>
+              <td>KR-25000</td>
+              <td>90</td>
+              <td><span class="color-indicator" style="background-color: #FFA500;"></span> ORANGE</td>
+              <td>25,000</td>
+              <td>50,000</td>
+              <td>20,000</td>
+              <td>45,000</td>
+              <td>35,000</td>
+              <td>175,000</td>
+            </tr>
+            <tr>
+              <td>KR-30000</td>
+              <td>100</td>
+              <td><span class="color-indicator" style="background-color: #FFA500;"></span> ORANGE</td>
+              <td>30,000</td>
+              <td>60,000</td>
+              <td>24,000</td>
+              <td>54,000</td>
+              <td>42,000</td>
+              <td>210,000</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div class="note">
+          <strong>Note:</strong> We manufacture slings up to 500 tons on request. Factor of safety for webbing 1:7. 
+          The colour combination as shown in the chart is a mere indicator, however the colour may change subject to availability of raw materials.
+        </div>
+      </div>
+      
+      <div class="tab-content" id="endless-notes">
+        <div class="note">
+          <strong>Technical Note:</strong> M* = mode factor. Vertical Lift: M* = 1, Basket Lift: M = 2, Choker Lift: M = 0.8, 45° Lift: M = 1.8, 90° Lift: M = 1.4
+        </div>
+        
+        <h3>Application Example</h3>
+        <p>The sunken 280 ton Indira Gate was successfully lifted using our Zebra Endless Round Slings.</p>
+        
+        <h3>Safety Information</h3>
+        <ul>
+          <li>Always inspect slings before use for cuts, abrasions, or damage</li>
+          <li>Do not exceed the working load limit for the specific lift configuration</li>
+          <li>Protect slings from sharp edges and abrasive surfaces</li>
+          <li>Store slings in a clean, dry environment away from direct sunlight</li>
+          <li>Regularly inspect for wear and tear - replace damaged slings immediately</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Round Slings Section -->
+  <section id="round" style="background-color: #e6f0ff;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Round Slings</h2>
+      </div>
+      
+      <div class="features">
+        <div class="feature-card">
+          <div class="card-header">
+            <h3>Eye & Eye Polyester Sling</h3>
+          </div>
+          <div class="card-body">
+            <table>
+              <thead>
+                <tr>
+                  <th>Art. No.</th>
+                  <th>WLL (kg)</th>
+                  <th>Thickness (mm)</th>
+                  <th>Width (mm)</th>
+                  <th>Min Length (m)</th>
+                  <th>Max Length (m)</th>
+                  <th>Weight (kg/m)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>R03-01</td>
+                  <td>1,000</td>
+                  <td>11</td>
+                  <td>50</td>
+                  <td>1.0</td>
+                  <td>80</td>
+                  <td>0.29</td>
+                </tr>
+                <tr>
+                  <td>R03-02</td>
+                  <td>2,000</td>
+                  <td>12</td>
+                  <td>60</td>
+                  <td>1.5</td>
+                  <td>80</td>
+                  <td>0.41</td>
+                </tr>
+                <tr>
+                  <td>R03-03</td>
+                  <td>3,000</td>
+                  <td>14</td>
+                  <td>70</td>
+                  <td>1.5</td>
+                  <td>80</td>
+                  <td>0.63</td>
+                </tr>
+                <tr>
+                  <td>R03-04</td>
+                  <td>4,000</td>
+                  <td>15</td>
+                  <td>80</td>
+                  <td>1.5</td>
+                  <td>80</td>
+                  <td>0.80</td>
+                </tr>
+                <tr>
+                  <td>R03-05</td>
+                  <td>5,000</td>
+                  <td>23</td>
+                  <td>90</td>
+                  <td>1.5</td>
+                  <td>80</td>
+                  <td>0.96</td>
+                </tr>
+                <tr>
+                  <td>R03-06</td>
+                  <td>6,000</td>
+                  <td>25</td>
+                  <td>90</td>
+                  <td>2.0</td>
+                  <td>80</td>
+                  <td>1.12</td>
+                </tr>
+                <tr>
+                  <td>R03-08</td>
+                  <td>8,000</td>
+                  <td>26</td>
+                  <td>100</td>
+                  <td>3.0</td>
+                  <td>80</td>
+                  <td>1.45</td>
+                </tr>
+                <tr>
+                  <td>R03-10</td>
+                  <td>10,000</td>
+                  <td>27</td>
+                  <td>110</td>
+                  <td>3.0</td>
+                  <td>80</td>
+                  <td>1.90</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <div class="note">
+              <strong>Note:</strong> 6:1 & 7:1 safety factor available. Fluorescence and light-fast styles available on request.
+            </div>
+          </div>
+        </div>
+        
+        <div class="feature-card">
+          <div class="card-header">
+            <h3>Special Sling for Petroleum Pipeline</h3>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>Specifically designed for pipe hoisting applications</li>
+              <li>Made from high-quality PES (Polyester) raw material</li>
+              <li>Wide lifting belt for better balance control</li>
+              <li>Special surface treatment with rubber coating</li>
+              <li>Non-slip, heat resistant, and anti-corrosion properties</li>
+              <li>Compatible with beams and metal parts</li>
+              <li>Enhanced safety, convenience, and long service life</li>
+            </ul>
+            
+            <table style="margin-top: 20px;">
+              <thead>
+                <tr>
+                  <th>WLL (kg)</th>
+                  <th>Thickness (mm)</th>
+                  <th>Width (mm)</th>
+                  <th>Min Length (m)</th>
+                  <th>Max Length (m)</th>
+                  <th>L (m)</th>
+                  <th>Weight (kg/m)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>16,000</td>
+                  <td>14</td>
+                  <td>250</td>
+                  <td>500</td>
+                  <td>2.3</td>
+                  <td>100</td>
+                  <td>3.15</td>
+                </tr>
+                <tr>
+                  <td>20,000</td>
+                  <td>14</td>
+                  <td>300</td>
+                  <td>550</td>
+                  <td>2.4</td>
+                  <td>100</td>
+                  <td>3.92</td>
+                </tr>
+                <tr>
+                  <td>24,000</td>
+                  <td>14</td>
+                  <td>400</td>
+                  <td>600</td>
+                  <td>2.5</td>
+                  <td>100</td>
+                  <td>4.78</td>
+                </tr>
+                <tr>
+                  <td>32,000</td>
+                  <td>14</td>
+                  <td>500</td>
+                  <td>650</td>
+                  <td>2.6</td>
+                  <td>100</td>
+                  <td>6.47</td>
+                </tr>
+                <tr>
+                  <td>40,000</td>
+                  <td>14</td>
+                  <td>600</td>
+                  <td>700</td>
+                  <td>2.8</td>
+                  <td>100</td>
+                  <td>8.16</td>
+                </tr>
+                <tr>
+                  <td>48,000</td>
+                  <td>14</td>
+                  <td>600</td>
+                  <td>600</td>
+                  <td>3.0</td>
+                  <td>100</td>
+                  <td>9.71</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <div class="note">
+              <strong>Note:</strong> 5:1 & 6:1 safety factor available. Working load limit is for U-lifting method.
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-info" id="contact">
+        <h3>Contact Us for More Information</h3>
+        <p><strong>Email:</strong> <a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
+        <p><strong>Phone:</strong> +91 93071 04214</p>
+        <p><strong>Address:</strong> I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
+        <a href="mailto:sales@portsideindia.com" class="btn" style="margin-top: 20px;">Get a Custom Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="WebbingSlings.html">Webbing Slings</a></li>
+            <li><a href="#">Round Slings</a></li>
+            <li><a href="#">Lowering & Safety Belts</a></li>
+            <li><a href="#">Specialty Slings</a></li>
+            <li><a href="#">Single-Part Slings</a></li>
+            <li><a href="#">Multiple-Leg Slings</a></li>
+            <li><a href="#">Grommet Slings</a></li>
+            <li><a href="#">Flemish-Eye Slings</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="#">Technical Resources</a></li>
+            <li><a href="#">Safety Guidelines</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <ul>
+            <li>I-WING GURUPREM SOCIETY KATRAP</li>
+            <li>BADALPUR, MUMBAI SUBURBS</li>
+            <li>421503, INDIA</li>
+            <li>Tel: +91 93071 04214</li>
+            <li>Email: sales@portsideindia.com</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        &copy; 2025 Portside India Traders. All Rights Reserved. | Strength that Anchors Your Success
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Tab functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const tabId = this.getAttribute('data-tab');
+          
+          // Remove active class from all buttons and content
+          tabBtns.forEach(b => b.classList.remove('active'));
+          document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.remove('active');
+          });
+          
+          // Add active class to clicked button and corresponding content
+          this.classList.add('active');
+          document.getElementById(tabId).classList.add('active');
+        });
+      });
+      
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
