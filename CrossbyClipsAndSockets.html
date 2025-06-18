@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crossby Forged Wire Rope Clips and Sockets | Portside India Traders</title>
+  <style>
+    /* Base Styles & Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --primary-dark: #002a60;
+      --primary: #004080;
+      --primary-light: #0059b3;
+      --secondary: #f0f7ff;
+      --light-gray: #f4f4f4;
+      --medium-gray: #eee;
+      --dark-gray: #333;
+      --footer-dark: #222;
+      --accent-gold: #ffcc00;
+      --white: #fff;
+      --black: #000;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: var(--white);
+      overflow-x: hidden;
+    }
+    
+    /* Progress Bar */
+    .progress-container {
+      width: 100%;
+      height: 6px;
+      background: var(--medium-gray);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+    
+    .progress-bar {
+      height: 6px;
+      background: linear-gradient(90deg, var(--primary-light), var(--primary-dark));
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+    
+    /* Layout */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    
+    section {
+      padding: 60px 0;
+    }
+    
+    /* Back to Products Button */
+    .back-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      background: var(--primary);
+      color: var(--white);
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+    
+    .back-button:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .back-button svg {
+      margin-right: 8px;
+    }
+    
+    /* Typography */
+    h1 {
+      font-size: 2.8rem;
+      color: var(--white);
+      margin-bottom: 20px;
+      text-align: center;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    h2 {
+      font-size: 1.8rem;
+      color: var(--primary-dark);
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 3px solid var(--primary);
+      position: relative;
+    }
+    
+    h3 {
+      font-size: 1.5rem;
+      color: var(--primary-dark);
+      margin-bottom: 15px;
+      position: relative;
+      padding-bottom: 8px;
+    }
+    
+    h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--primary);
+    }
+    
+    p {
+      margin-bottom: 15px;
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
+      color: var(--white);
+      padding: 80px 0 100px;
+      border-radius: 0 0 30px 30px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at top right, rgba(255,255,255,0.1), transparent 30%);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      opacity: 0.9;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: var(--white);
+      color: var(--primary);
+      padding: 12px 35px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      background: var(--secondary);
+    }
+    
+    /* Features Section */
+    .features {
+      background: var(--white);
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .feature-card {
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    
+    .feature-card.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    .feature-content {
+      padding: 25px;
+    }
+    
+    .feature-card h3 {
+      color: var(--primary-dark);
+      margin-bottom: 15px;
+    }
+    
+    .feature-list {
+      list-style: none;
+    }
+    
+    .feature-list li {
+      margin-bottom: 10px;
+      padding-left: 25px;
+      position: relative;
+    }
+    
+    .feature-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--primary);
+      font-weight: bold;
+    }
+    
+    /* Specs Section */
+    .specs {
+      background: var(--secondary);
+    }
+    
+    .specs-container {
+      overflow-x: auto;
+    }
+    
+    .specs-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      border-radius: 10px;
+      overflow: hidden;
+      min-width: 800px;
+    }
+    
+    .specs-table th {
+      background: var(--primary);
+      color: var(--white);
+      text-align: left;
+      padding: 15px;
+      font-weight: bold;
+    }
+    
+    .specs-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid var(--medium-gray);
+    }
+    
+    .specs-table tr:nth-child(even) {
+      background: var(--light-gray);
+    }
+    
+    .specs-table tr:hover {
+      background: rgba(0, 64, 128, 0.05);
+    }
+    
+    .table-caption {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 20px 0 10px;
+      color: var(--primary-dark);
+      text-align: center;
+    }
+    
+    /* Application Section */
+    .application {
+      background: var(--white);
+    }
+    
+    .steps-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      counter-reset: step-counter;
+    }
+    
+    .step-card {
+      background: var(--white);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 8px 8px 0;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.5s ease;
+    }
+    
+    .step-card.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .step-card:nth-child(1) { transition-delay: 0.1s; }
+    .step-card:nth-child(2) { transition-delay: 0.3s; }
+    .step-card:nth-child(3) { transition-delay: 0.5s; }
+    
+    .step-card::before {
+      counter-increment: step-counter;
+      content: counter(step-counter);
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    
+    .step-card h3 {
+      margin-bottom: 15px;
+      padding-right: 50px;
+    }
+    
+    /* Contact Section */
+    .contact {
+      background: var(--secondary);
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+    
+    .contact-card {
+      background: var(--white);
+      padding: 30px 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+    
+    .contact-card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .contact-icon {
+      width: 70px;
+      height: 70px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+    
+    .contact-icon svg {
+      width: 30px;
+      height: 30px;
+      fill: var(--white);
+    }
+    
+    .contact-card h3 {
+      margin-bottom: 15px;
+      text-align: center;
+      padding-bottom: 0;
+    }
+    
+    .contact-card h3::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .contact-info {
+      color: var(--dark-gray);
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--footer-dark);
+      color: var(--white);
+      padding: 60px 0 30px;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    
+    .footer-column h3 {
+      color: var(--accent-gold);
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-gold);
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+    
+    .footer-links a {
+      color: var(--light-gray);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-links a:hover {
+      color: var(--accent-gold);
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--light-gray);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      .features-grid,
+      .steps-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+      
+      section {
+        padding: 50px 0;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.3rem;
+      }
+      
+      h2 {
+        font-size: 1.6rem;
+      }
+      
+      .features-grid,
+      .steps-container,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .feature-card,
+      .step-card {
+        margin-bottom: 20px;
+      }
+      
+      .back-button {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+      
+      .specs-table {
+        font-size: 0.9rem;
+      }
+    }
+    
+    /* Animation Keyframes */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Scroll Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+  
+  <!-- Back to Products Button -->
+  <a href="Product1.html" class="back-button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+    </svg>
+    Back to Products
+  </a>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Crossby Forged Wire Rope Clips and Sockets</h1>
+        <p>Premium quality components engineered for maximum strength, reliability, and safety in demanding lifting and rigging applications.</p>
+        <a href="#contact" class="cta-button">Request Technical Specifications</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <h2>Product Features</h2>
+      <div class="features-grid">
+        <div class="feature-card" id="feature1">
+          <div class="feature-content">
+            <h3>Superior Strength</h3>
+            <ul class="feature-list">
+              <li>Forged from high-grade steel for exceptional durability</li>
+              <li>Designed to withstand extreme loads and stresses</li>
+              <li>Rigorous quality control ensures consistent performance</li>
+              <li>Meets international safety standards</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="feature-card" id="feature2">
+          <div class="feature-content">
+            <h3>Corrosion Resistance</h3>
+            <ul class="feature-list">
+              <li>Electro-plated U-bolts and nuts for enhanced protection</li>
+              <li>Special coatings prevent rust in marine environments</li>
+              <li>Extended service life in harsh conditions</li>
+              <li>Low maintenance requirements</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="feature-card" id="feature3">
+          <div class="feature-content">
+            <h3>Precision Engineering</h3>
+            <ul class="feature-list">
+              <li>Optimized dimensions for perfect fit and function</li>
+              <li>Wide range of sizes to accommodate various rope diameters</li>
+              <li>Consistent manufacturing tolerances</li>
+              <li>Compatible with all standard wire rope types</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Specs Section -->
+  <section class="specs">
+    <div class="container">
+      <h2>Technical Specifications</h2>
+      
+      <div class="specs-container">
+        <h3 class="table-caption">Wire Rope Clips Specifications</h3>
+        <table class="specs-table">
+          <thead>
+            <tr>
+              <th>Rope Size (mm)</th>
+              <th>Stock No.</th>
+              <th>Package Qty.</th>
+              <th>Weight/100 (kg)</th>
+              <th>A (mm)</th>
+              <th>B (mm)</th>
+              <th>C (mm)</th>
+              <th>D (mm)</th>
+              <th>E (mm)</th>
+              <th>F (mm)</th>
+              <th>G (mm)</th>
+              <th>H (mm)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>3-4</td>
+              <td>1010015</td>
+              <td>100</td>
+              <td>2.72</td>
+              <td>5.60</td>
+              <td>18.3</td>
+              <td>11.2</td>
+              <td>11.9</td>
+              <td>10.4</td>
+              <td>9.65</td>
+              <td>20.6</td>
+              <td>23.9</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>1010033</td>
+              <td>100</td>
+              <td>4.54</td>
+              <td>6.35</td>
+              <td>24.6</td>
+              <td>14.2</td>
+              <td>15.0</td>
+              <td>12.7</td>
+              <td>11.2</td>
+              <td>23.9</td>
+              <td>29.5</td>
+            </tr>
+            <tr>
+              <td>6-7</td>
+              <td>1010051</td>
+              <td>100</td>
+              <td>8.62</td>
+              <td>7.85</td>
+              <td>26.2</td>
+              <td>12.7</td>
+              <td>19.1</td>
+              <td>16.8</td>
+              <td>14.2</td>
+              <td>30.2</td>
+              <td>36.6</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>1010079</td>
+              <td>100</td>
+              <td>12.7</td>
+              <td>9.65</td>
+              <td>35.1</td>
+              <td>19.1</td>
+              <td>22.4</td>
+              <td>18.3</td>
+              <td>17.5</td>
+              <td>33.3</td>
+              <td>42.9</td>
+            </tr>
+            <tr>
+              <td>9-10</td>
+              <td>1010097</td>
+              <td>100</td>
+              <td>21.8</td>
+              <td>11.2</td>
+              <td>38.1</td>
+              <td>19.1</td>
+              <td>25.4</td>
+              <td>23.1</td>
+              <td>19.1</td>
+              <td>41.4</td>
+              <td>49.3</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>1010113</td>
+              <td>50</td>
+              <td>35.4</td>
+              <td>12.7</td>
+              <td>47.8</td>
+              <td>25.4</td>
+              <td>30.2</td>
+              <td>26.2</td>
+              <td>22.4</td>
+              <td>46.0</td>
+              <td>58.0</td>
+            </tr>
+            <tr>
+              <td>12-13</td>
+              <td>1010131</td>
+              <td>50</td>
+              <td>36.3</td>
+              <td>12.7</td>
+              <td>47.8</td>
+              <td>25.4</td>
+              <td>30.2</td>
+              <td>28.7</td>
+              <td>22.4</td>
+              <td>48.5</td>
+              <td>58.0</td>
+            </tr>
+            <tr>
+              <td>14-15</td>
+              <td>1010159</td>
+              <td>50</td>
+              <td>49.4</td>
+              <td>14.2</td>
+              <td>57.0</td>
+              <td>31.8</td>
+              <td>33.3</td>
+              <td>31.0</td>
+              <td>23.9</td>
+              <td>52.5</td>
+              <td>63.5</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>1010177</td>
+              <td>50</td>
+              <td>49.9</td>
+              <td>14.2</td>
+              <td>60.5</td>
+              <td>31.8</td>
+              <td>33.3</td>
+              <td>34.0</td>
+              <td>23.9</td>
+              <td>52.5</td>
+              <td>63.5</td>
+            </tr>
+            <tr>
+              <td>18-20</td>
+              <td>1010195</td>
+              <td>25</td>
+              <td>64</td>
+              <td>15.7</td>
+              <td>70.0</td>
+              <td>36.6</td>
+              <td>38.1</td>
+              <td>35.8</td>
+              <td>26.9</td>
+              <td>57.0</td>
+              <td>72.0</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <h3 class="table-caption">Wedge Sockets Specifications</h3>
+        <table class="specs-table">
+          <thead>
+            <tr>
+              <th>Rope Dia. (mm)</th>
+              <th>Stock No.</th>
+              <th>Weight (kg)</th>
+              <th>Wedge Stock No.</th>
+              <th>Wedge Weight (kg)</th>
+              <th>A (mm)</th>
+              <th>B (mm)</th>
+              <th>C (mm)</th>
+              <th>D (mm)</th>
+              <th>G (mm)</th>
+              <th>H (mm)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>9-10</td>
+              <td>1035000</td>
+              <td>1.44</td>
+              <td>1035555</td>
+              <td>0.23</td>
+              <td>145</td>
+              <td>69.1</td>
+              <td>20.6</td>
+              <td>20.6</td>
+              <td>35.1</td>
+              <td>77.7</td>
+            </tr>
+            <tr>
+              <td>11-13</td>
+              <td>1035018</td>
+              <td>2.79</td>
+              <td>1035564</td>
+              <td>0.48</td>
+              <td>175</td>
+              <td>88.1</td>
+              <td>25.4</td>
+              <td>25.4</td>
+              <td>41.1</td>
+              <td>95.5</td>
+            </tr>
+            <tr>
+              <td>14-16</td>
+              <td>1035018</td>
+              <td>4.40</td>
+              <td>1035573</td>
+              <td>0.81</td>
+              <td>210</td>
+              <td>109</td>
+              <td>31.8</td>
+              <td>30.2</td>
+              <td>63.8</td>
+              <td>111</td>
+            </tr>
+            <tr>
+              <td>18-19</td>
+              <td>1035027</td>
+              <td>6.58</td>
+              <td>1035582</td>
+              <td>1.18</td>
+              <td>251</td>
+              <td>130</td>
+              <td>38.1</td>
+              <td>35.1</td>
+              <td>62.0</td>
+              <td>134</td>
+            </tr>
+            <tr>
+              <td>20-22</td>
+              <td>1035036</td>
+              <td>9.75</td>
+              <td>1035591</td>
+              <td>1.82</td>
+              <td>286</td>
+              <td>149</td>
+              <td>44.5</td>
+              <td>41.4</td>
+              <td>68.5</td>
+              <td>156</td>
+            </tr>
+            <tr>
+              <td>24-26</td>
+              <td>1035045</td>
+              <td>13.9</td>
+              <td>1035600</td>
+              <td>2.44</td>
+              <td>325</td>
+              <td>161</td>
+              <td>51.0</td>
+              <td>51.0</td>
+              <td>74.7</td>
+              <td>177</td>
+            </tr>
+            <tr>
+              <td>28</td>
+              <td>1035054</td>
+              <td>20.5</td>
+              <td>1035609</td>
+              <td>3.56</td>
+              <td>365</td>
+              <td>176</td>
+              <td>57.0</td>
+              <td>57.0</td>
+              <td>84.0</td>
+              <td>194</td>
+            </tr>
+            <tr>
+              <td>30-32</td>
+              <td>1035063</td>
+              <td>29.4</td>
+              <td>1035618</td>
+              <td>4.80</td>
+              <td>415</td>
+              <td>222</td>
+              <td>66.5</td>
+              <td>63.5</td>
+              <td>90.5</td>
+              <td>239</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Application Section -->
+  <section class="application">
+    <div class="container">
+      <h2>Installation & Application</h2>
+      <div class="steps-container">
+        <div class="step-card">
+          <h3>Selection & Preparation</h3>
+          <p>Choose the correct clip or socket size based on your wire rope diameter. Ensure all components are clean, undamaged, and free from corrosion. For clips, determine the required number based on rope diameter and application.</p>
+        </div>
+        
+        <div class="step-card">
+          <h3>Proper Installation</h3>
+          <p>For clips: Position the U-bolt over the dead end of the rope with the saddle on the live end. Tighten nuts evenly to the recommended torque. For sockets: Insert the rope through the socket body, place the wedge, and apply tension to secure.</p>
+        </div>
+        
+        <div class="step-card">
+          <h3>Inspection & Maintenance</h3>
+          <p>Regularly inspect for signs of wear, deformation, or corrosion. Check for proper seating of all components. Maintain correct torque on nuts. Replace any components showing excessive wear or damage. Follow manufacturer's maintenance schedule.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </div>
+          <h3>Email</h3>
+          <div class="contact-info">
+            <p>sales@portsideindia.com</p>
+            
+          </div>
+        </div>
+        
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+          </div>
+          <h3>Phone</h3>
+          <div class="contact-info">
+            <p>+91 93071 04214</p>
+            
+          </div>
+        </div>
+        
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+          </div>
+          <h3>Address</h3>
+          <div class="contact-info">
+            <p>I-WING GURUPREM SOCIETY</p>
+            <p>KATRAP, BADALPUR</p>
+            <p>MUMBAI SUBURBS, 421503</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Portside India Traders</h3>
+          <p>Providing high-quality maritime and industrial lifting solutions since 2010. Strength that anchors your success.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="#">Wire Rope & Fittings</a></li>
+            <li><a href="#">Clips & Sockets</a></li>
+            <li><a href="#">Shackles & Hooks</a></li>
+            <li><a href="#">Lifting Accessories</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Certifications</h3>
+          <p>ISO 9001:2015 Certified</p>
+          <p>DNV-GL Approved</p>
+          <p>ABS Certified</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Portside India Traders. All Rights Reserved. | Designed with Excellence</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    // Scroll Progress Bar
+    window.onscroll = function() {
+      updateProgressBar();
+      checkAnimation();
+    };
+    
+    function updateProgressBar() {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById("progressBar").style.width = scrolled + "%";
+    }
+    
+    // Animation on scroll
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.75
+      );
+    }
+    
+    function checkAnimation() {
+      const featureCards = document.querySelectorAll('.feature-card');
+      const stepCards = document.querySelectorAll('.step-card');
+      
+      featureCards.forEach(card => {
+        if (isElementInViewport(card)) {
+          card.classList.add('animate');
+        }
+      });
+      
+      stepCards.forEach(card => {
+        if (isElementInViewport(card)) {
+          card.classList.add('animate');
+        }
+      });
+    }
+    
+    // Initialize animations on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      // Trigger animations for elements already in viewport
+      checkAnimation();
+    });
+  </script>
+</body>
+</html>
