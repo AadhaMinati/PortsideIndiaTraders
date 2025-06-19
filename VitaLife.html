@@ -1,446 +1,641 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portside India Traders - VitaLife 400 Wire Rope Lubricant</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portside India Traders - Vitalife Wire Rope Lubricants</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Reset & Global Styles */
-    * {
+    /* Global Styles */
+    body, h1, h2, h3, p, ul, li, a, section, header, footer {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-    body {
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #333;
-      overflow-x: hidden;
       line-height: 1.6;
+      color: #333;
     }
+    
+    a {
+      text-decoration: none;
+      color: #004080;
+    }
+    
     .container {
       width: 90%;
       max-width: 1200px;
       margin: 0 auto;
-    }
-    h1, h2, h3 {
-      color: #004080;
-      margin-bottom: 1.5rem;
-    }
-    h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-top: 1rem;
-    }
-    h2 {
-      font-size: 1.8rem;
-      border-bottom: 2px solid #004080;
-      padding-bottom: 0.5rem;
-      display: inline-block;
+      padding: 20px 0;
     }
     
-    /* Progress Bar */
-    .progress-container {
-      position: fixed;
+    section {
+      padding: 40px 0;
+    }
+    
+    /* Header & Navigation */
+    header {
+      background-color: #004080; /* Ocean Blue */
+      color: #fff;
+      padding: 20px 0;
+      position: sticky;
       top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: transparent;
-      z-index: 1001;
-    }
-    .progress-bar {
-      height: 4px;
-      background: #004080;
-      width: 0%;
-      transition: width 0.3s ease-out;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
     
-    /* Hero Section */
-    .hero {
-      background: linear-gradient(135deg, #004080, #002a60);
-      color: white;
-      text-align: center;
-      padding: 4rem 1rem;
-      margin-bottom: 2rem;
-      border-radius: 0 0 20px 20px;
-    }
-    .hero h1 {
-      color: white;
-      font-size: 2.8rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: 0 auto 2rem;
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     
-    /* Product Info Cards */
-    .card-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2rem;
-      margin: 2rem 0;
+    .logo h1 {
+      font-size: 1.5em;
+      margin: 0;
+      color: white; /* White text as requested */
     }
-    .card {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      padding: 2rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    .card.animated {
-      animation: fadeInUp 0.6s ease-out forwards;
-    }
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    }
-    .card h3 {
-      color: #004080;
-      font-size: 1.5rem;
-      margin-bottom: 1.5rem;
-      position: relative;
-    }
-    .card h3::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      width: 50px;
-      height: 3px;
-      background: #004080;
-    }
-    .feature-list {
+    
+    nav ul {
       list-style: none;
-    }
-    .feature-list li {
-      padding: 0.8rem 0;
-      border-bottom: 1px solid #eee;
       display: flex;
-      align-items: flex-start;
-    }
-    .feature-list li:last-child {
-      border-bottom: none;
-    }
-    .feature-list li::before {
-      content: '✓';
-      color: #004080;
-      font-weight: bold;
-      margin-right: 10px;
-      font-size: 1.2rem;
     }
     
-    /* Specifications Table */
-    .specs-container {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      padding: 2rem;
-      margin: 3rem 0;
-      overflow-x: auto;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    .specs-container.animated {
-      animation: fadeInUp 0.6s ease-out forwards;
-    }
-    .specs-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1.5rem;
-    }
-    .specs-table th {
-      background: #004080;
-      color: white;
-      padding: 12px 15px;
-      text-align: left;
-    }
-    .specs-table td {
-      padding: 12px 15px;
-      border-bottom: 1px solid #eee;
-    }
-    .specs-table tr:nth-child(even) {
-      background: #f9f9f9;
-    }
-    .specs-table tr:hover {
-      background: #f0f7ff;
+    nav ul li {
+      margin-left: 20px;
     }
     
-    /* Application Section */
-    .application {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      padding: 2rem;
-      margin: 3rem 0;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    .application.animated {
-      animation: fadeInUp 0.6s ease-out forwards;
-    }
-    .app-steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
-    .step {
-      background: #f0f7ff;
-      border-left: 4px solid #004080;
-      padding: 1.5rem;
-      border-radius: 0 8px 8px 0;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    .step.animated {
-      animation: fadeInUp 0.6s ease-out forwards;
-    }
-    .step:nth-child(1) { animation-delay: 0.1s; }
-    .step:nth-child(2) { animation-delay: 0.2s; }
-    .step:nth-child(3) { animation-delay: 0.3s; }
-    .step-number {
-      display: inline-block;
-      background: #004080;
-      color: white;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 30px;
-      margin-bottom: 1rem;
-      font-weight: bold;
-    }
-    
-    /* Contact Section */
-    .contact {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      padding: 2rem;
-      margin: 3rem 0;
-      text-align: center;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    .contact.animated {
-      animation: fadeInUp 0.6s ease-out forwards;
-    }
-    .contact-info {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-top: 1.5rem;
-    }
-    .contact-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-width: 250px;
-    }
-    .contact-icon {
-      background: #004080;
-      color: white;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    .contact-item a {
-      color: #004080;
-      text-decoration: none;
+    nav ul li a {
+      color: #fff;
       font-weight: bold;
       transition: color 0.3s;
     }
-    .contact-item a:hover {
-      color: #002a60;
-      text-decoration: underline;
+    
+    nav ul li a:hover {
+      color: #ff9800;
     }
     
-    /* Back to Home Button */
-    .back-home-container {
+    /* Hero Section - Solid Color Background */
+    .hero {
+      background: linear-gradient(135deg, #004080, #002b5c);
+      color: white;
       text-align: center;
-      margin: 2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
     }
-    .back-home-btn {
-      display: inline-block;
+    
+    .hero .content {
+      max-width: 800px;
+    }
+    
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+    
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 25px;
+      color: white;
+      opacity: 0.9;
+    }
+    
+    .hero .cta {
+      background: #fff;
+      color: #004080;
       padding: 12px 30px;
-      background-color: #004080;
-      color: #fff;
-      text-decoration: none;
-      font-size: 1.1rem;
-      border-radius: 30px;
-      transition: background-color 0.3s ease, transform 0.3s;
+      border-radius: 5px;
       font-weight: bold;
-      border: none;
-      cursor: pointer;
+      font-size: 1.1em;
+      display: inline-block;
+      transition: all 0.3s;
+      margin-top: 20px;
     }
-    .back-home-btn:hover {
-      background-color: #002a60;
+    
+    .hero .cta:hover {
+      background: #ff9800;
       transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Section Headings */
+    .section-title {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: #ff9800;
+    }
+    
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+    
+    .feature-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      border-top: 4px solid #004080;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-card i {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    .feature-card h3 {
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    /* Tabs */
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 30px 0;
+      justify-content: center;
+    }
+    
+    .tab-btn {
+      background: #e0e0e0;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+    
+    .tab-btn.active, .tab-btn:hover {
+      background: #004080;
+      color: white;
+    }
+    
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Tables */
+    .product-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .product-table th {
+      background: #004080;
+      color: white;
+      padding: 15px;
+      text-align: left;
+      font-weight: 600;
+    }
+    
+    .product-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .product-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .product-table tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    
+    .product-table tr:hover {
+      background-color: #e3f2fd;
+    }
+    
+    /* Notes Section */
+    .note {
+      background: #fff8e1;
+      border-left: 4px solid #ff9800;
+      padding: 25px;
+      border-radius: 5px;
+      margin: 30px 0;
+    }
+    
+    .note h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .note ul {
+      padding-left: 20px;
+    }
+    
+    .note li {
+      margin-bottom: 10px;
+    }
+    
+    /* Contact Section */
+    .contact-card {
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: #e3f2fd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      color: #004080;
+      font-size: 1.2rem;
+    }
+    
+    .contact-info {
+      flex: 1;
+    }
+    
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+    
+    .spec-card {
+      background: white;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      border-top: 4px solid #004080;
+    }
+    
+    .spec-card h3 {
+      color: #004080;
+      margin-top: 0;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .application-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .application-table th {
+      background: #004080;
+      color: white;
+      padding: 12px 15px;
+      font-weight: 600;
+    }
+    
+    .application-table td {
+      padding: 10px 15px;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: center;
+    }
+    
+    .application-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .application-table tr:nth-child(even) {
+      background-color: #f8f9fa;
     }
     
     /* Footer */
     footer {
-      background: #222;
+      background: #333;
       color: #fff;
-      padding: 40px 0 20px;
-    }
-    .footer-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin-bottom: 30px;
-    }
-    .footer-column h3 {
-      color: #ffcc00;
-      margin-bottom: 20px;
-      position: relative;
-      padding-bottom: 10px;
-    }
-    .footer-column h3:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 50px;
-      height: 2px;
-      background: #ffcc00;
-    }
-    .footer-links {
-      list-style: none;
-    }
-    .footer-links li {
-      margin-bottom: 10px;
-    }
-    .footer-links a {
-      color: #aaa;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    .footer-links a:hover {
-      color: #fff;
-    }
-    .copyright {
       text-align: center;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      color: #aaa;
-      font-size: 0.9rem;
+      padding: 30px 0;
+      margin-top: 50px;
     }
     
-    /* Animations */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .eco-badge {
+      display: inline-block;
+      background: #4CAF50;
+      color: white;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 0.8em;
+      margin-left: 8px;
+      vertical-align: middle;
     }
     
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
+    /* Responsive */
+    @media screen and (max-width: 768px) {
       .hero h1 {
         font-size: 2.2rem;
       }
-      .card-container {
-        grid-template-columns: 1fr;
+      
+      .product-table, .application-table {
+        display: block;
+        overflow-x: auto;
       }
-      .footer-content {
-        grid-template-columns: 1fr;
-      }
-    }
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.8rem;
-      }
-      .hero h1 {
-        font-size: 1.8rem;
-      }
-      .contact-info {
+      
+      header .container {
         flex-direction: column;
-        align-items: center;
+      }
+      
+      nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      nav ul li {
+        margin: 5px 10px;
+      }
+      
+      .contact-item {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Progress Bar -->
-  <div class="progress-container">
-    <div class="progress-bar" id="progressBar"></div>
-  </div>
-  
-  <!-- Hero Section -->
-  <section class="hero">
+  <!-- Header -->
+  <header>
     <div class="container">
-      <h1>VitaLife 400® Wire Rope Lubricant</h1>
-      <p>Advanced penetrating lubricant that extends rope life and provides superior corrosion protection</p>
+      <div class="logo">
+        <h1>Portside India Traders</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="Product1.html">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="content">
+      <h1 style="color: white;">Vitalife Wire Rope Lubricants</h1>
+      <p>Premium lubricants that penetrate wire ropes to displace water and contaminants, reducing wear and corrosion</p>
+      <a href="#contact" class="cta">Request Product Info</a>
     </div>
   </section>
 
-  <!-- Main Content -->
-  <div class="container">
-    <!-- Product Features -->
-    <section>
-      <h2>Key Features</h2>
-      <div class="card-container">
-        <div class="card">
-          <h3>Deep Penetration</h3>
-          <ul class="feature-list">
-            <li>Reaches the core of wire ropes</li>
-            <li>Penetrates between inner strands</li>
-            <li>Protects against internal corrosion</li>
-            <li>Lubricates critical friction points</li>
+  <!-- Key Benefits Section -->
+  <section id="benefits">
+    <div class="container">
+      <h2 class="section-title">Key Benefits</h2>
+      
+      <div class="features">
+        <div class="feature-card">
+          <i class="fas fa-tint"></i>
+          <h3>Deep Core Penetration</h3>
+          <p>Unlike surface-only lubricants, Vitalife penetrates to the rope core for complete protection</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Strand Preservation</h3>
+          <p>Provides inner strand preservation and lubricity for extended rope life</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-eye"></i>
+          <h3>Visual Inspection</h3>
+          <p>Allows visual rope inspection without obscuring damage</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-bolt"></i>
+          <h3>Reduces Friction</h3>
+          <p>Significantly reduces inter-strand friction during operation</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-hourglass-half"></i>
+          <h3>Extended Service Life</h3>
+          <p>Extends rope service life by up to 40% compared to conventional lubricants</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-film"></i>
+          <h3>Protective Film</h3>
+          <p>Forms protective outer film against corrosion and environmental damage</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-wind"></i>
+          <h3>Non-tacky Formula</h3>
+          <p>Won't attract dust or debris during operation</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-leaf"></i>
+          <h3>Eco-Friendly Options</h3>
+          <p>Environmentally friendly Bio-Lube option available</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Line Section -->
+  <section id="product-line" style="background-color: #f8f9fa;">
+    <div class="container">
+      <h2 class="section-title">Product Line Overview</h2>
+      
+      <table class="product-table">
+        <thead>
+          <tr>
+            <th>Product Type</th>
+            <th>Specialization</th>
+            <th>Container Sizes</th>
+            <th>Stock No.</th>
+            <th>Weight (kg)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Vitalife 400</td>
+            <td>General Purpose</td>
+            <td>349 grams<br>18.9 Liters<br>268 Liters</td>
+            <td>1038945<br>1038954<br>1038964</td>
+            <td>0.6<br>18.8<br>191</td>
+          </tr>
+          <tr>
+            <td>Vitalife 410 Bio-Lube <span class="eco-badge">ECO</span></td>
+            <td>Eco-Friendly</td>
+            <td>342 grams<br>18.9 Liters<br>269 Liters</td>
+            <td>1039043<br>1039051<br>1039022</td>
+            <td>0.6<br>18.8<br>191</td>
+          </tr>
+          <tr>
+            <td>Vitalife 500</td>
+            <td>Gas Use & Transport</td>
+            <td>18.9 Liters<br>268 Liters<br>28.1 Liters<br>3.7 Liters</td>
+            <td>1038927<br>1038982<br>1039034<br>1039027</td>
+            <td>18.8<br>191<br>0.91<br>3.72</td>
+          </tr>
+          <tr>
+            <td>Vitalife 500</td>
+            <td>Brown Cables</td>
+            <td>18.9 Liters<br>268 Liters</td>
+            <td>1039040<br>1039043</td>
+            <td>18.8<br>191</td>
+          </tr>
+          <tr>
+            <td>Vitalife 600</td>
+            <td>Elevator Systems</td>
+            <td>Container details not specified</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div class="note">
+        <h3><i class="fas fa-exclamation-triangle"></i> Important Note</h3>
+        <p>Aerosol forms are regulated dangerous goods - consult MSDS for shipping regulations and safety information.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Usage Recommendations -->
+  <section id="recommendations">
+    <div class="container">
+      <h2 class="section-title">Field Usage Recommendations</h2>
+      
+      <div class="spec-grid">
+        <div class="spec-card">
+          <h3><i class="fas fa-search"></i> Regular Inspection</h3>
+          <p>Determine lubrication needs through frequent examinations of wire rope condition. Look for signs of wear, corrosion, and dryness.</p>
+        </div>
+        
+        <div class="spec-card">
+          <h3><i class="fas fa-sync-alt"></i> Re-lubrication Frequency</h3>
+          <p>Frequency of application is more critical than quantity applied. Regular maintenance ensures optimal rope performance and longevity.</p>
+        </div>
+        
+        <div class="spec-card">
+          <h3><i class="fas fa-info-circle"></i> Application Note</h3>
+          <p>Expect some field loss due to spillage and handling - use application guidelines as reference points rather than exact measures.</p>
+        </div>
+        
+        <div class="spec-card">
+          <h3><i class="fas fa-arrow-down"></i> Core Penetration</h3>
+          <p>Unlike greasy lubricants, Vitalife penetrates to the rope core for complete internal protection and lubrication.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vitalife 400 Specifications -->
+  <section id="specs" style="background-color: #f8f9fa;">
+    <div class="container">
+      <h2 class="section-title">Vitalife 400® Specifications</h2>
+      
+      <div class="spec-grid">
+        <div class="spec-card">
+          <h3><i class="fas fa-box"></i> Available Formats</h3>
+          <ul>
+            <li>12 oz. spray cans</li>
+            <li>5-gallon pails</li>
+            <li>55-gallon drums</li>
           </ul>
         </div>
         
-        <div class="card">
-          <h3>Performance Benefits</h3>
-          <ul class="feature-list">
-            <li>Significantly extends rope service life</li>
-            <li>Reduces friction between strands</li>
-            <li>Forms protective outer film</li>
-            <li>Allows for visual inspection of rope</li>
-          </ul>
-        </div>
-        
-        <div class="card">
-          <h3>Packaging Options</h3>
-          <ul class="feature-list">
-            <li>12 oz. spray cans for spot treatment</li>
-            <li>5 gallon pails for maintenance teams</li>
-            <li>55 gallon drums for industrial use</li>
-            <li>Economical bulk options</li>
+        <div class="spec-card">
+          <h3><i class="fas fa-cogs"></i> Ideal Applications</h3>
+          <ul>
+            <li>Bridges and suspension systems</li>
+            <li>Construction cranes</li>
+            <li>Drag lines and mining equipment</li>
+            <li>Mining operations</li>
+            <li>Marine applications</li>
+            <li>Industrial hoists</li>
           </ul>
         </div>
       </div>
-    </section>
-
-    <!-- Specifications -->
-    <section class="specs-container">
-      <h2>Lubricant Requirements</h2>
-      <table class="specs-table">
+      
+      <h3 style="text-align: center; margin: 40px 0 20px; color: #004080;">Application Guide</h3>
+      
+      <table class="application-table">
         <thead>
           <tr>
-            <th>Diameter of Wire Rope (in.)</th>
-            <th>Gallons of VitaLife 400 per 1,000 ft.</th>
-            <th>Diameter of Wire Rope (in.)</th>
-            <th>Gallons of VitaLife 400 per 1,000 ft.</th>
+            <th>Wire Rope Diameter (in.)</th>
+            <th>Gallons per 1,000 ft</th>
+            <th>Wire Rope Diameter (in.)</th>
+            <th>Gallons per 1,000 ft</th>
           </tr>
         </thead>
         <tbody>
@@ -476,135 +671,108 @@
           </tr>
         </tbody>
       </table>
-    </section>
-
-    <!-- Application -->
-    <section class="application">
-      <h2>Application Guidelines</h2>
-      <div class="app-steps">
-        <div class="step">
-          <div class="step-number">1</div>
-          <h3>Regular Inspection</h3>
-          <p>Inspect wire ropes regularly to determine lubrication needs. Proper maintenance extends rope life by keeping it clean and preventing rust.</p>
-        </div>
-        
-        <div class="step">
-          <div class="step-number">2</div>
-          <h3>Frequency Over Quantity</h3>
-          <p>Regular re-lubrication is more important than the quantity applied at one time. Maintain a consistent schedule for best results.</p>
-        </div>
-        
-        <div class="step">
-          <div class="step-number">3</div>
-          <h3>Field Considerations</h3>
-          <p>Account for spillage and handling losses during field application. Use recommended quantities as a guide for your specific conditions.</p>
-        </div>
-      </div>
-      
-      <div class="card" style="margin-top: 2rem; background: #f0f7ff;">
-        <h3>Why VitaLife 400® Stands Out</h3>
-        <p>Unlike most wire rope lubricants that remain on the surface, VitaLife 400® penetrates to the core of the wire rope, providing comprehensive protection and lubrication where it's needed most.</p>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact">
-      <h2>Contact Us</h2>
-      <p>Get in touch for quotes or technical information</p>
-      
-      <div class="contact-info">
-        <div class="contact-item">
-          <div class="contact-icon">✉️</div>
-          <h3>Email</h3>
-          <a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a>
-        </div>
-        
-        <div class="contact-item">
-          <div class="contact-icon">📱</div>
-          <h3>Phone</h3>
-          <a href="tel:+919307104214">+91 93071 04214</a>
-        </div>
-        
-        <div class="contact-item">
-          <div class="contact-icon">🏢</div>
-          <h3>Address</h3>
-          <p>I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Back to Home Button -->
-    <div class="back-home-container">
-      <a href="Product1.html" class="back-home-btn">Back to Products</a>
     </div>
-  </div>
+  </section>
+
+  <!-- Spray Systems -->
+  <section id="spray">
+    <div class="container">
+      <h2 class="section-title">Spray Application Systems</h2>
+      
+      <div class="features">
+        <div class="feature-card">
+          <i class="fas fa-spray-can"></i>
+          <h3>15 Liter Backpack Sprayer</h3>
+          <p>Designed for rugged construction conditions with specially designed seals for Vitalife products</p>
+          <p><strong>Stock No:</strong> 1039082</p>
+          <p><strong>Weight:</strong> 5.3 kg</p>
+          <p>Compatible with Vitalife 400® and Bio-Lube®</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <p><a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Phone</h3>
+            <p>+91 93071 04214</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Address</h3>
+            <p>I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-column">
-          <h3>Portside India Traders</h3>
-          <p>Providing high-quality maritime lifting equipment engineered for durability and excellence since our founding.</p>
-        </div>
-        
-        <div class="footer-column">
-          <h3>Wire Rope Products</h3>
-          <ul class="footer-links">
-            <li><a href="#">Wire Lock Kits</a></li>
-            <li><a href="#">Wire Rope Socketing Kits</a></li>
-            <li><a href="#">Vitalife Kits</a></li>
-            <li><a href="#">Clips & Sockets</a></li>
-            <li><a href="#">Spelter & Swage Sockets</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-column">
-          <h3>Quick Links</h3>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#about">About Us</a></li>
-            <li><a href="Product1.html">All Products</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="copyright">
-        <p>&copy; 2025 Portside India Traders. All Rights Reserved.</p>
-      </div>
+      <p>&copy; 2025 Portside India Traders. All Rights Reserved.</p>
+      <p>Premium Lubrication Solutions for Industrial and Maritime Applications</p>
     </div>
   </footer>
-  
+
   <script>
-    // Scroll progress indicator
-    window.onscroll = function() {
-      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
-      document.getElementById("progressBar").style.width = scrolled + "%";
-    };
-    
-    // Add animation to elements when they enter the viewport
     document.addEventListener('DOMContentLoaded', function() {
-      const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.card, .specs-container, .application, .contact, .step');
-        
-        elements.forEach(element => {
-          const elementPosition = element.getBoundingClientRect().top;
-          const screenPosition = window.innerHeight / 1.3;
+      // Tab functionality
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons and content
+          tabBtns.forEach(b => b.classList.remove('active'));
+          document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.remove('active');
+          });
           
-          if(elementPosition < screenPosition) {
-            element.classList.add('animated');
+          // Add active class to clicked button
+          btn.classList.add('active');
+          
+          // Show corresponding content
+          const tabId = btn.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
+        });
+      });
+      
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
           }
         });
-      };
-      
-      // Initial check
-      animateOnScroll();
-      
-      // Check on scroll
-      window.addEventListener('scroll', animateOnScroll);
+      });
     });
   </script>
 </body>
