@@ -49,10 +49,31 @@
       align-items: center;
     }
     
-    .logo h1 {
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 50px;
+      margin-right: 15px;
+    }
+    
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .logo-text h1 {
       font-size: 1.5em;
       margin: 0;
-      color: white; /* White text as requested */
+      color: white;
+    }
+    
+    .logo-text span {
+      font-size: 0.8em;
+      color: #ff9800;
+      margin-top: 3px;
     }
     
     nav ul {
@@ -366,9 +387,51 @@
     footer {
       background: #333;
       color: #fff;
-      text-align: center;
-      padding: 30px 0;
+      padding: 50px 0 20px;
       margin-top: 50px;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    
+    .footer-column {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 30px;
+      padding: 0 15px;
+    }
+    
+    .footer-column h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: #ff9800;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+      color: #ddd;
+      transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: #ff9800;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #444;
     }
     
     .feature-icon {
@@ -411,6 +474,10 @@
         margin-right: 0;
         margin-bottom: 15px;
       }
+      
+      .footer-content {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
@@ -419,7 +486,11 @@
   <header>
     <div class="container">
       <div class="logo">
-        <h1>Portside India Traders</h1>
+        <img src="Images/FinalLogo.png" alt="Portside India Traders Logo">
+        <div class="logo-text">
+          <h1>Portside India Traders</h1>
+          <span>Strength that Anchors Your Success</span>
+        </div>
       </div>
       <nav>
         <ul>
@@ -448,25 +519,25 @@
       
       <div class="features">
         <div class="feature-card">
-          <div class="feature-icon">🔩</div>
+          <i class="fas fa-hammer"></i>
           <h3>Forged Construction</h3>
           <p>Manufactured from high-grade forged steel for superior strength and durability</p>
         </div>
         
         <div class="feature-card">
-          <div class="feature-icon">⚖️</div>
+          <i class="fas fa-ruler-combined"></i>
           <h3>Precision Fit</h3>
           <p>Engineered to exact tolerances for secure, vibration-resistant connections</p>
         </div>
         
         <div class="feature-card">
-          <div class="feature-icon">🛡️</div>
+          <i class="fas fa-shield-alt"></i>
           <h3>Corrosion Resistance</h3>
           <p>Hot-dip galvanized finish for protection in harsh environments</p>
         </div>
         
         <div class="feature-card">
-          <div class="feature-icon">📏</div>
+          <i class="fas fa-expand-arrows-alt"></i>
           <h3>Comprehensive Sizing</h3>
           <p>Available for wire rope diameters from 3mm to 90mm</p>
         </div>
@@ -474,8 +545,14 @@
     </div>
   </section>
 
+  <!-- Tabs Section -->
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="clips">Wire Rope Clips</button>
+    <button class="tab-btn" data-tab="sockets">Wedge Sockets</button>
+  </div>
+
   <!-- Wire Rope Clips Section -->
-  <section id="clips" style="background-color: #f8f9fa;">
+  <section id="clips" style="background-color: #f8f9fa;" class="tab-content active">
     <div class="container">
       <h2 class="section-title">Crosby Forged Wire Rope Clips</h2>
       
@@ -862,15 +939,11 @@
   </section>
 
   <!-- Wedge Sockets Section -->
-  <section id="sockets">
+  <section id="sockets" class="tab-content">
     <div class="container">
       <h2 class="section-title">S-421T Wedge Sockets</h2>
       
-      <div class="dimension-diagram">
-        <h3>Wedge Socket Dimension Diagram</h3>
-        <div style="font-size: 8rem; color: #e3f2fd; margin: 20px 0;">⎍</div>
-        <p>Diagram showing all critical dimensions (A-V) for proper installation</p>
-      </div>
+      
       
       <h3 style="text-align: center; margin: 40px 0 20px; color: #004080;">Assembly Specifications</h3>
       
@@ -1182,13 +1255,73 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Portside India Traders. All Rights Reserved.</p>
-      <p>Premium Rigging Solutions for Industrial and Maritime Applications</p>
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Portside India Traders</h3>
+          <p>Providing premium rigging solutions for industrial and maritime applications since our founding.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Wire Rope Products</h3>
+          <ul class="footer-links">
+            <li><a href="WireLockKits.html">Wire Lock Kits</a></li>
+            <li><a href="VitaLife.html">Vitalife Kits</a></li>
+            <li><a href="CrossbyClipsAndSockets.html">WireRope Clips &amp; Sockets</a></li>
+            <li><a href="CrossbyOpenAndClosedSpelterSockets.html">Open/Closed Spelter Sockets</a></li>
+            <li><a href="CrossbyOpenAndClosedSwageSockets.html">Open/Closed Swage Sockets</a></li>
+            <li><a href="Thimbles.html">Thimbles</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="Product1.html">All Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Certifications</h3>
+          <ul class="footer-links">
+            <li><a href="#">EN13411-4:2002 Certified</a></li>
+            <li><a href="#">ASMEB30.9 Compliant</a></li>
+            <li><a href="#">OSHA Approved</a></li>
+            <li><a href="#">ISO Quality Standards</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2025 Portside India Traders. All Rights Reserved.</p>
+      </div>
     </div>
   </footer>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+      // Tab functionality
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons and content
+          tabBtns.forEach(b => b.classList.remove('active'));
+          document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.remove('active');
+          });
+          
+          // Add active class to clicked button
+          btn.classList.add('active');
+          
+          // Show corresponding content
+          const tabId = btn.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
+        });
+      });
+      
       // Smooth scrolling for navigation
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
