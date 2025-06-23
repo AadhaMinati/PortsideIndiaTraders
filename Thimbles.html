@@ -6,120 +6,41 @@
   <title>Portside India Traders - Extra Heavy Wire Rope Thimbles</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Base Styles */
-    * {
+    /* Global Styles */
+    body, h1, h2, h3, p, ul, li, a, section, header, footer {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-    
-    :root {
-      --primary: #004080;
-      --secondary: #ffcc00;
-      --light: #f0f5ff;
-      --dark: #002c5c;
-      --text: #333;
-      --white: #ffffff;
-      --gray: #e9ecef;
-      --navy: #0a2a4e;
-      --ocean: #1a5a96;
-    }
-    
-    body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
-      color: var(--text);
-      background-color: var(--white);
-      overflow-x: hidden;
-    }
-    
-    h1, h2, h3, h4 {
-      color: var(--dark);
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-    
-    p {
-      margin-bottom: 1rem;
+      color: #333;
     }
     
     a {
       text-decoration: none;
-      color: var(--primary);
-      transition: all 0.3s ease;
+      color: #004080;
+      transition: all 0.3s;
     }
     
     a:hover {
-      color: var(--dark);
+      color: #ff9800;
     }
     
     .container {
       width: 90%;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 15px;
-    }
-    
-    .btn {
-      display: inline-block;
-      background: var(--primary);
-      color: var(--white);
-      padding: 12px 30px;
-      border-radius: 30px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      border: none;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0, 64, 128, 0.2);
-    }
-    
-    .btn:hover {
-      background: var(--dark);
-      transform: translateY(-3px);
-      box-shadow: 0 6px 15px rgba(0, 64, 128, 0.3);
-    }
-    
-    .btn-secondary {
-      background: var(--secondary);
-      color: var(--dark);
-    }
-    
-    .btn-secondary:hover {
-      background: #e6b800;
-      color: var(--dark);
+      padding: 20px 0;
     }
     
     section {
-      padding: 80px 0;
+      padding: 60px 0;
     }
     
-    .section-title {
-      text-align: center;
-      margin-bottom: 50px;
-      position: relative;
-    }
-    
-    .section-title:after {
-      content: '';
-      position: absolute;
-      bottom: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 4px;
-      background: var(--secondary);
-    }
-    
-    .text-center {
-      text-align: center;
-    }
-    
-    /* Header Styles */
+    /* Header & Navigation */
     header {
-      background-color: var(--primary);
-      color: var(--white);
+      background-color: #004080;
+      color: #fff;
       padding: 15px 0;
       position: sticky;
       top: 0;
@@ -144,14 +65,15 @@
     }
     
     .logo-text h1 {
-      font-size: 1.6rem;
-      color: var(--white);
+      font-size: 1.5em;
       margin: 0;
+      color: white;
     }
     
     .logo-text span {
       font-size: 0.9rem;
-      opacity: 0.8;
+      color: #ffcc00;
+      margin-top: 3px;
     }
     
     nav ul {
@@ -161,7 +83,7 @@
     }
     
     nav a {
-      color: var(--white);
+      color: white;
       font-weight: 600;
       font-size: 1.1rem;
       position: relative;
@@ -174,7 +96,7 @@
       left: 0;
       width: 0;
       height: 2px;
-      background: var(--secondary);
+      background: #ffcc00;
       transition: width 0.3s ease;
     }
     
@@ -184,26 +106,11 @@
     
     /* Hero Section */
     .hero {
-      background: linear-gradient(rgba(10, 42, 78, 0.85), rgba(10, 42, 78, 0.95)), 
-                  radial-gradient(circle at center, var(--ocean), var(--navy));
-      color: var(--white);
-      padding: 120px 0;
+      background: linear-gradient(135deg, #004080, #002b5c);
+      color: white;
+      padding: 100px 0;
       text-align: center;
       position: relative;
-      overflow: hidden;
-    }
-    
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: 
-        radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
-        radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 20%);
-      pointer-events: none;
     }
     
     .hero-content {
@@ -214,15 +121,15 @@
     }
     
     .hero h1 {
-      font-size: 3.2rem;
-      color: var(--white);
-      margin-bottom: 20px;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      color: white;
     }
     
     .hero p {
-      font-size: 1.3rem;
-      margin-bottom: 30px;
+      font-size: 1.2em;
+      margin-bottom: 25px;
+      color: white;
       opacity: 0.9;
     }
     
@@ -233,33 +140,82 @@
       margin-top: 30px;
     }
     
-    /* Features Section */
-    .features {
-      background-color: var(--light);
+    .btn {
+      display: inline-block;
+      background: white;
+      color: #004080;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
     
+    .btn:hover {
+      background: #ffcc00;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .btn-secondary {
+      background: #ffcc00;
+      color: #004080;
+    }
+    
+    .btn-secondary:hover {
+      background: #e6b800;
+    }
+    
+    /* Section Headings */
+    .section-title {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: #ffcc00;
+    }
+    
+    /* Features Section */
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
     }
     
     .feature-card {
-      background: var(--white);
-      border-radius: 10px;
+      background: #fff;
+      border-radius: 8px;
       padding: 30px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-align: center;
+      border-top: 4px solid #004080;
     }
     
     .feature-card:hover {
       transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     }
     
     .feature-icon {
       font-size: 2.5rem;
-      color: var(--primary);
+      color: #004080;
       margin-bottom: 20px;
       height: 70px;
       display: flex;
@@ -268,96 +224,123 @@
     }
     
     .feature-card h3 {
-      color: var(--primary);
+      color: #004080;
       margin-bottom: 15px;
       font-size: 1.4rem;
     }
     
-    /* Construction Process */
-    .process-steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-    
-    .step-card {
-      background: var(--white);
-      border-radius: 10px;
-      padding: 30px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      position: relative;
-      border-top: 4px solid var(--primary);
-    }
-    
-    .step-number {
-      position: absolute;
-      top: -20px;
-      left: 20px;
-      background: var(--primary);
-      color: var(--white);
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
+    /* Tabs */
+    .tabs {
       display: flex;
-      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 30px 0;
       justify-content: center;
-      font-weight: bold;
-      font-size: 1.2rem;
     }
     
-    .step-card h3 {
-      margin-top: 15px;
-      margin-bottom: 15px;
-      color: var(--primary);
+    .tab-btn {
+      background: #e0e0e0;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
     }
     
-    /* Technical Specs */
-    .specs-container {
-      overflow-x: auto;
-      margin-top: 30px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      border-radius: 10px;
+    .tab-btn.active, .tab-btn:hover {
+      background: #004080;
+      color: white;
     }
     
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Tables */
     .specs-table {
       width: 100%;
       border-collapse: collapse;
-      min-width: 800px;
+      margin: 20px 0;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     }
     
     .specs-table th {
-      background: var(--primary);
-      color: var(--white);
-      padding: 15px 20px;
+      background: #004080;
+      color: white;
+      padding: 15px;
       text-align: left;
       font-weight: 600;
     }
     
     .specs-table td {
-      padding: 15px 20px;
-      border-bottom: 1px solid var(--gray);
+      padding: 12px 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .specs-table tr:last-child td {
+      border-bottom: none;
     }
     
     .specs-table tr:nth-child(even) {
-      background-color: var(--light);
+      background-color: #f8f9fa;
     }
     
     .specs-table tr:hover {
-      background-color: rgba(0, 64, 128, 0.05);
+      background-color: #e3f2fd;
     }
     
-    /* Thimble Dimensions */
+    /* Notes Section */
+    .note {
+      background: #fff8e1;
+      border-left: 4px solid #ffcc00;
+      padding: 25px;
+      border-radius: 5px;
+      margin: 30px 0;
+    }
+    
+    .note h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .note ul {
+      padding-left: 20px;
+    }
+    
+    .note li {
+      margin-bottom: 10px;
+    }
+    
+    /* Dimension Guide */
     .dimension-guide {
-      background-color: var(--light);
-      border-radius: 10px;
+      background-color: #f8f9fa;
       padding: 30px;
+      border-radius: 8px;
       margin: 40px 0;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     }
     
     .dimension-header {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
       margin-bottom: 30px;
@@ -366,11 +349,13 @@
     
     .dimension-image {
       flex: 1;
+      min-width: 300px;
       text-align: center;
     }
     
     .dimension-legend {
       flex: 1;
+      min-width: 300px;
     }
     
     .dimension-legend ul {
@@ -386,7 +371,7 @@
     
     .dimension-legend li:before {
       content: "•";
-      color: var(--primary);
+      color: #004080;
       font-weight: bold;
       display: inline-block;
       width: 1.5em;
@@ -394,78 +379,99 @@
       font-size: 1.2rem;
     }
     
+    /* Thimble Types */
     .thimble-types {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
       margin-top: 40px;
     }
     
     .thimble-type {
-      flex: 1;
-      background: var(--white);
-      border-radius: 10px;
+      background: white;
+      border-radius: 8px;
       padding: 25px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
       text-align: center;
+      border-top: 4px solid #004080;
     }
     
     .thimble-type h3 {
-      color: var(--primary);
+      color: #004080;
       margin-bottom: 20px;
       padding-bottom: 15px;
-      border-bottom: 2px solid var(--secondary);
+      border-bottom: 2px solid #ffcc00;
     }
     
     /* Contact Section */
     .contact {
-      background: linear-gradient(135deg, var(--primary), var(--dark));
-      color: var(--white);
+      background: linear-gradient(135deg, #004080, #002b5c);
+      color: white;
     }
     
     .contact .section-title {
-      color: var(--white);
+      color: white;
     }
     
     .contact .section-title:after {
-      background: var(--secondary);
-    }
-    
-    .contact-info {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 30px;
+      background: #ffcc00;
     }
     
     .contact-card {
       background: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
+      border-radius: 8px;
       padding: 30px;
-      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.2);
     }
     
-    .contact-icon {
-      font-size: 2rem;
+    .contact-item {
+      display: flex;
+      align-items: center;
       margin-bottom: 20px;
-      color: var(--secondary);
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
     
-    .contact-card h3 {
-      color: var(--white);
-      margin-bottom: 15px;
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
     
-    .contact-card p {
-      margin-bottom: 5px;
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      color: #ffcc00;
+      font-size: 1.2rem;
+    }
+    
+    .contact-info {
+      flex: 1;
+    }
+    
+    .contact-info a {
+      color: white;
+    }
+    
+    .contact-info a:hover {
+      color: #ffcc00;
     }
     
     /* Footer */
     footer {
       background: #222;
-      color: var(--white);
-      padding: 40px 0 20px;
+      color: white;
+      padding: 50px 0 20px;
+      margin-top: 50px;
     }
     
     .footer-content {
@@ -476,7 +482,7 @@
     }
     
     .footer-column h3 {
-      color: var(--secondary);
+      color: #ffcc00;
       margin-bottom: 20px;
       position: relative;
       padding-bottom: 10px;
@@ -489,7 +495,7 @@
       left: 0;
       width: 50px;
       height: 2px;
-      background: var(--secondary);
+      background: #ffcc00;
     }
     
     .footer-links {
@@ -505,7 +511,7 @@
     }
     
     .footer-links a:hover {
-      color: var(--white);
+      color: white;
     }
     
     .copyright {
@@ -514,72 +520,6 @@
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       color: #aaa;
       font-size: 0.9rem;
-    }
-    
-    /* Responsive Styles */
-    @media (max-width: 992px) {
-      .hero h1 {
-        font-size: 2.8rem;
-      }
-      
-      nav ul {
-        gap: 15px;
-      }
-      
-      .dimension-header {
-        flex-direction: column;
-      }
-    }
-    
-    @media (max-width: 768px) {
-      .header-container {
-        flex-direction: column;
-        gap: 15px;
-      }
-      
-      .hero {
-        padding: 80px 0;
-      }
-      
-      .hero h1 {
-        font-size: 2.4rem;
-      }
-      
-      .hero p {
-        font-size: 1.1rem;
-      }
-      
-      .hero-btns {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      section {
-        padding: 60px 0;
-      }
-      
-      .thimble-types {
-        flex-direction: column;
-      }
-    }
-    
-    @media (max-width: 576px) {
-      .logo-text h1 {
-        font-size: 1.4rem;
-      }
-      
-      .hero h1 {
-        font-size: 2rem;
-      }
-      
-      nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      
-      .step-card, .feature-card {
-        padding: 25px 20px;
-      }
     }
     
     /* Diagram styling */
@@ -594,13 +534,13 @@
     
     .dimension-label {
       font-weight: bold;
-      color: var(--primary);
+      color: #004080;
     }
     
     .diagram-title {
       font-weight: bold;
       margin-bottom: 15px;
-      color: var(--dark);
+      color: #004080;
     }
     
     .diagram-container {
@@ -617,19 +557,19 @@
       margin: 40px auto;
       background: #e0e7ff;
       border-radius: 60px 60px 0 0;
-      border: 2px solid var(--primary);
+      border: 2px solid #004080;
     }
     
     .dimension-line {
       position: absolute;
-      background: var(--primary);
+      background: #004080;
       height: 1px;
     }
     
     .dimension-text {
       position: absolute;
       font-size: 12px;
-      color: var(--primary);
+      color: #004080;
       background: rgba(255, 255, 255, 0.8);
       padding: 2px 5px;
       border-radius: 3px;
@@ -658,6 +598,64 @@
     
     .dimension-H { top: 200px; left: 90px; width: 20px; }
     .dimension-H-text { top: 200px; left: 95px; }
+    
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+      
+      nav ul {
+        gap: 15px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .hero {
+        padding: 60px 0;
+      }
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .hero p {
+        font-size: 1.1rem;
+      }
+      
+      .hero-btns {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      section {
+        padding: 40px 0;
+      }
+      
+      .dimension-header {
+        flex-direction: column;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .logo-text h1 {
+        font-size: 1.4rem;
+      }
+      
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -698,7 +696,7 @@
   </section>
 
   <!-- Features Section -->
-  <section class="features">
+  <section>
     <div class="container">
       <div class="section-title">
         <h2>Why Choose Our Thimbles</h2>
@@ -707,19 +705,19 @@
       
       <div class="features-grid">
         <div class="feature-card">
-          <div class="feature-icon"><i class="fas fa-shield-alt fa-2x"></i></div>
+          <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
           <h3>Maximum Protection</h3>
           <p>Our thimbles protect wire rope eyes from crushing, abrasion, and deformation, extending the life of your equipment.</p>
         </div>
         
         <div class="feature-card">
-          <div class="feature-icon"><i class="fas fa-weight-hanging fa-2x"></i></div>
+          <div class="feature-icon"><i class="fas fa-weight-hanging"></i></div>
           <h3>Heavy-Duty Construction</h3>
           <p>Manufactured from high-grade steel to withstand extreme loads and harsh marine environments.</p>
         </div>
         
         <div class="feature-card">
-          <div class="feature-icon"><i class="fas fa-ruler-combined fa-2x"></i></div>
+          <div class="feature-icon"><i class="fas fa-ruler-combined"></i></div>
           <h3>Precise Dimensions</h3>
           <p>Engineered to exact specifications to ensure perfect fit and optimal performance with your wire rope.</p>
         </div>
@@ -727,7 +725,7 @@
     </div>
   </section>
 
-
+  
         
         <div class="thimble-types">
           <div class="thimble-type">
@@ -751,10 +749,15 @@
     <div class="container">
       <div class="section-title">
         <h2>Technical Specifications</h2>
-        <p>G-414 Extra Heavy Wire Rope Thimbles (Standard)</p>
+        <p>G-414 Extra Heavy Wire Rope Thimbles</p>
       </div>
       
-      <div class="specs-container">
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="standard">Standard Thimbles</button>
+        <button class="tab-btn" data-tab="shackle">Shackle-Loc Thimbles</button>
+      </div>
+      
+      <div id="standard" class="tab-content active">
         <table class="specs-table">
           <thead>
             <tr>
@@ -984,12 +987,7 @@
         </table>
       </div>
       
-      <div class="section-title" style="margin-top: 80px;">
-        <h2>Shackle-Loc Specifications</h2>
-        <p>G-414 SL Extra Heavy Wire Rope Thimbles (Shackle-Loc)</p>
-      </div>
-      
-      <div class="specs-container">
+      <div id="shackle" class="tab-content">
         <table class="specs-table">
           <thead>
             <tr>
@@ -1124,14 +1122,46 @@
         </table>
       </div>
       
-      <div class="notes" style="margin-top: 30px; background: var(--light); padding: 20px; border-radius: 8px;">
-        <h3>Notes:</h3>
+      <div class="note">
+        <h3><i class="fas fa-exclamation-circle"></i> Important Notes</h3>
         <ul>
           <li>Weights are per 100 pieces (lbs)</li>
           <li>"-" indicates missing data in original document</li>
           <li>All dimensions in inches (in)</li>
           <li>G-414 SL includes an additional J dimension for shackle compatibility</li>
+          <li>All thimbles are forged from high-grade steel for maximum strength</li>
+          <li>Inspect thimbles regularly for signs of wear, deformation, or corrosion</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications Section -->
+  <section style="background-color: #f8f9fa;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Industry Applications</h2>
+        <p>Extra Heavy Wire Rope Thimbles for demanding environments</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-ship"></i></div>
+          <h3>Marine & Offshore</h3>
+          <p>Mooring systems, ship rigging, and offshore platform installations</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-crane"></i></div>
+          <h3>Construction</h3>
+          <p>Crane operations, suspension bridges, and structural cable systems</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-industry"></i></div>
+          <h3>Industrial</h3>
+          <p>Material handling, conveyor systems, and heavy machinery</p>
+        </div>
       </div>
     </div>
   </section>
@@ -1140,27 +1170,39 @@
   <section id="contact" class="contact">
     <div class="container">
       <div class="section-title">
-        <h2>Contact Us</h2>
-        <p>Get in touch for quotes or more information</p>
+        <h2 style="color: white;">Contact Us</h2>
+        <p style="color: white;">Get in touch for quotes or more information</p>
       </div>
       
-      <div class="contact-info">
-        <div class="contact-card">
-          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-          <h3>Email</h3>
-          <p><a style="color: white;" href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-info">
+            <h3 style="color: white;">Email</h3>
+            <p><a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
+          </div>
         </div>
         
-        <div class="contact-card">
-          <div class="contact-icon"><i class="fas fa-phone"></i></div>
-          <h3>Phone</h3>
-          <p>+91 93071 04214</p>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-info">
+            <h3 style="color: white;">Phone</h3>
+            <p style="color: white;">+91 93071 04214</p>
+          </div>
         </div>
         
-        <div class="contact-card">
-          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-          <h3>Address</h3>
-          <p>I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-info">
+            <h3 style="color: white;">Address</h3>
+            <p style="color: white;">I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
+          </div>
         </div>
       </div>
     </div>
@@ -1172,17 +1214,18 @@
       <div class="footer-content">
         <div class="footer-column">
           <h3>Portside India Traders</h3>
-          <p>Providing high-quality maritime lifting equipment engineered for durability and excellence since our founding.</p>
+          <pstyle="color: white;">Providing premium maritime lifting equipment engineered for safety and reliability since our founding.</p>
         </div>
         
         <div class="footer-column">
           <h3>Products</h3>
           <ul class="footer-links">
-            <li><a href="#">Slings & Belts</a></li>
-            <li><a href="#">Wire Rope & Fittings</a></li>
-            <li><a href="#">Clips & Sockets</a></li>
-            <li><a href="#">Crosby Products</a></li>
-            <li><a href="#">Lifting Accessories</a></li>
+            <li><a href="WireLockKits.html">Wire Lock Kits</a></li>
+            <li><a href="VitaLife.html">Vita Life</a></li>
+            <li><a href="CrossbyClipsAndSockets.html">Crossby Wirerope Clips and Sockets</a></li>
+            <li><a href="CrossbyOpenAndClosedSpelterSockets.html">Crossby Open / Closed Spelter Sockets</a></li>
+            <li><a href="CrossbyOpenAndClosedSwageSockets.html">Crossby Open / Closed Swage Sockets</a></li>
+            <li><a href="Thimbles.html">Thimbles</a></li>
           </ul>
         </div>
         
@@ -1190,17 +1233,65 @@
           <h3>Quick Links</h3>
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="#about">About Us</a></li>
             <li><a href="Product1.html">All Products</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Certifications</h3>
+          <ul class="footer-links">
+            <li><a href="#">ASME B30.26 Certified</a></li>
+            <li><a href="#">DNV Offshore Certified</a></li>
+            <li><a href="#">OSHA Compliant</a></li>
+            <li><a href="#">ISO Quality Standards</a></li>
           </ul>
         </div>
       </div>
       
       <div class="copyright">
-        <p>&copy; 2025 Portside India Traders. All Rights Reserved.</p>
+        <p>&copy; 2025 Portside India Traders. All Rights Reserved. Crosby® is a registered trademark of The Crosby Group LLC.</p>
       </div>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Tab functionality
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons and content
+          tabBtns.forEach(b => b.classList.remove('active'));
+          document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.remove('active');
+          });
+          
+          // Add active class to clicked button
+          btn.classList.add('active');
+          
+          // Show corresponding content
+          const tabId = btn.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
+        });
+      });
+      
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
