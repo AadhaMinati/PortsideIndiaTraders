@@ -49,10 +49,31 @@
       align-items: center;
     }
     
-    .logo h1 {
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 50px;
+      margin-right: 15px;
+    }
+    
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .logo-text h1 {
       font-size: 1.5em;
       margin: 0;
-      color: white; /* White text as requested */
+      color: white;
+    }
+    
+    .logo-text span {
+      font-size: 0.8em;
+      color: #ff9800;
+      margin-top: 3px;
     }
     
     nav ul {
@@ -372,9 +393,51 @@
     footer {
       background: #333;
       color: #fff;
-      text-align: center;
-      padding: 30px 0;
+      padding: 50px 0 20px;
       margin-top: 50px;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    
+    .footer-column {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 30px;
+      padding: 0 15px;
+    }
+    
+    .footer-column h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: #ff9800;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+      color: #ddd;
+      transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: #ff9800;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #444;
     }
     
     .eco-badge {
@@ -422,6 +485,22 @@
         margin-right: 0;
         margin-bottom: 15px;
       }
+      
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+    
+    /* Product Image */
+    .product-image {
+      text-align: center;
+      margin: 30px 0;
+    }
+    
+    .product-image img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
   </style>
 </head>
@@ -430,7 +509,11 @@
   <header>
     <div class="container">
       <div class="logo">
-        <h1>Portside India Traders</h1>
+        <img src="Images/FinalLogo.png" alt="Portside India Traders Logo">
+        <div class="logo-text">
+          <h1>Portside India Traders</h1>
+          <span>Strength that Anchors Your Success</span>
+        </div>
       </div>
       <nav>
         <ul>
@@ -514,54 +597,109 @@
     <div class="container">
       <h2 class="section-title">Product Line Overview</h2>
       
-      <table class="product-table">
-        <thead>
-          <tr>
-            <th>Product Type</th>
-            <th>Specialization</th>
-            <th>Container Sizes</th>
-            <th>Stock No.</th>
-            <th>Weight (kg)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Vitalife 400</td>
-            <td>General Purpose</td>
-            <td>349 grams<br>18.9 Liters<br>268 Liters</td>
-            <td>1038945<br>1038954<br>1038964</td>
-            <td>0.6<br>18.8<br>191</td>
-          </tr>
-          <tr>
-            <td>Vitalife 410 Bio-Lube <span class="eco-badge">ECO</span></td>
-            <td>Eco-Friendly</td>
-            <td>342 grams<br>18.9 Liters<br>269 Liters</td>
-            <td>1039043<br>1039051<br>1039022</td>
-            <td>0.6<br>18.8<br>191</td>
-          </tr>
-          <tr>
-            <td>Vitalife 500</td>
-            <td>Gas Use & Transport</td>
-            <td>18.9 Liters<br>268 Liters<br>28.1 Liters<br>3.7 Liters</td>
-            <td>1038927<br>1038982<br>1039034<br>1039027</td>
-            <td>18.8<br>191<br>0.91<br>3.72</td>
-          </tr>
-          <tr>
-            <td>Vitalife 500</td>
-            <td>Brown Cables</td>
-            <td>18.9 Liters<br>268 Liters</td>
-            <td>1039040<br>1039043</td>
-            <td>18.8<br>191</td>
-          </tr>
-          <tr>
-            <td>Vitalife 600</td>
-            <td>Elevator Systems</td>
-            <td>Container details not specified</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="vitalife-400">Vitalife 400</button>
+        <button class="tab-btn" data-tab="vitalife-410">Vitalife 410 Bio-Lube</button>
+        <button class="tab-btn" data-tab="vitalife-500">Vitalife 500</button>
+      </div>
+      
+      <div id="vitalife-400" class="tab-content active">
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>Container Size</th>
+              <th>Stock No.</th>
+              <th>Weight (kg)</th>
+              <th>Applications</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>349 grams</td>
+              <td>1038945</td>
+              <td>0.6</td>
+              <td rowspan="3">General Purpose Lubricant</td>
+            </tr>
+            <tr>
+              <td>18.9 Liters</td>
+              <td>1038954</td>
+              <td>18.8</td>
+            </tr>
+            <tr>
+              <td>268 Liters</td>
+              <td>1038964</td>
+              <td>191</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div id="vitalife-410" class="tab-content">
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>Container Size</th>
+              <th>Stock No.</th>
+              <th>Weight (kg)</th>
+              <th>Applications</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>342 grams</td>
+              <td>1039043</td>
+              <td>0.6</td>
+              <td rowspan="3">Environmentally Friendly Option</td>
+            </tr>
+            <tr>
+              <td>18.9 Liters</td>
+              <td>1039051</td>
+              <td>18.8</td>
+            </tr>
+            <tr>
+              <td>269 Liters</td>
+              <td>1039022</td>
+              <td>191</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div id="vitalife-500" class="tab-content">
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>Container Size</th>
+              <th>Stock No.</th>
+              <th>Weight (kg)</th>
+              <th>Applications</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>18.9 Liters</td>
+              <td>1038927</td>
+              <td>18.8</td>
+              <td rowspan="4">Gas Use & Transport</td>
+            </tr>
+            <tr>
+              <td>268 Liters</td>
+              <td>1038982</td>
+              <td>191</td>
+            </tr>
+            <tr>
+              <td>28.1 Liters</td>
+              <td>1039034</td>
+              <td>0.91</td>
+            </tr>
+            <tr>
+              <td>3.7 Liters</td>
+              <td>1039027</td>
+              <td>3.72</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       
       <div class="note">
         <h3><i class="fas fa-exclamation-triangle"></i> Important Note</h3>
@@ -733,8 +871,48 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Portside India Traders. All Rights Reserved.</p>
-      <p>Premium Lubrication Solutions for Industrial and Maritime Applications</p>
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Portside India Traders</h3>
+          <p>Providing premium lubrication solutions for industrial and maritime applications since our founding.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Wire Rope Products</h3>
+          <ul class="footer-links">
+            <li><a href="WireLockKits.html">Wire Lock Kits</a></li>
+            <li><a href="VitaLife.html">Vitalife Kits</a></li>
+            <li><a href="CrossbyClipsAndSockets.html">WireRope Clips &amp; Sockets</a></li>
+            <li><a href="CrossbyOpenAndClosedSpelterSockets.html">Open/Closed Spelter Sockets</a></li>
+            <li><a href="CrossbyOpenAndClosedSwageSockets.html">Open/Closed Swage Sockets</a></li>
+            <li><a href="Thimbles.html">Thimbles</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="Product1.html">All Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Certifications</h3>
+          <ul class="footer-links">
+            <li><a href="#">EN13411-4:2002 Certified</a></li>
+            <li><a href="#">ASMEB30.9 Compliant</a></li>
+            <li><a href="#">OSHA Approved</a></li>
+            <li><a href="#">ISO Quality Standards</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2025 Portside India Traders. All Rights Reserved.</p>
+      </div>
     </div>
   </footer>
 
