@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portside India Traders - Crosby Welded Master Links</title>
+  <title>Portside India Traders - Crosby® Eye Foundry Hook</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     /* Global Styles */
@@ -57,6 +57,9 @@
     .logo img {
       height: 50px;
       margin-right: 15px;
+      background: #fff;
+      padding: 5px;
+      border-radius: 4px;
     }
     
     .logo-text {
@@ -194,45 +197,6 @@
       margin-bottom: 15px;
     }
     
-    /* Tabs */
-    .tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 30px 0;
-      justify-content: center;
-    }
-    
-    .tab-btn {
-      background: #e0e0e0;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 30px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-size: 1rem;
-    }
-    
-    .tab-btn.active, .tab-btn:hover {
-      background: #004080;
-      color: white;
-    }
-    
-    .tab-content {
-      display: none;
-      animation: fadeIn 0.5s ease;
-    }
-    
-    .tab-content.active {
-      display: block;
-    }
-    
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
     /* Tables */
     .sling-table {
       width: 100%;
@@ -249,13 +213,14 @@
       background: #004080;
       color: white;
       padding: 15px;
-      text-align: left;
+      text-align: center;
       font-weight: 600;
     }
     
     .sling-table td {
       padding: 12px 15px;
       border-bottom: 1px solid #e0e0e0;
+      text-align: center;
     }
     
     .sling-table tr:last-child td {
@@ -268,11 +233,6 @@
     
     .sling-table tr:hover {
       background-color: #e3f2fd;
-    }
-    
-    .crosby-red {
-      color: #e53935;
-      font-weight: bold;
     }
     
     /* Notes Section */
@@ -433,23 +393,6 @@
     }
     
     /* Crosby Branding */
-    .crosby-logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 20px 0;
-    }
-    
-    .crosby-logo img {
-      max-width: 200px;
-    }
-    
-    .red-pin {
-      color: #e53935;
-      font-weight: bold;
-      font-style: italic;
-    }
-    
     .specs-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -475,24 +418,6 @@
     
     .spec-card i {
       color: #ff9800;
-    }
-    
-    .product-image {
-      text-align: center;
-      margin: 30px 0;
-    }
-    
-    .product-image img {
-      max-width: 300px;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    
-    .dimension-img {
-      max-width: 100%;
-      margin: 20px 0;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
     
     .features-list {
@@ -530,6 +455,76 @@
       border-radius: 8px;
       padding: 25px;
       margin: 30px 0;
+    }
+    
+    .dimension-placeholder {
+      background: #f0f0f0;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      margin: 30px 0;
+      font-style: italic;
+      color: #666;
+    }
+    
+    .safety-badge {
+      background: rgba(0, 64, 128, 0.1); /* 10% opacity */;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 30px 0;
+      text-align: center;
+    }
+    
+    .safety-badge i {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      color: #ff9800;
+    }
+    
+    .feature-icon {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .feature-icon i {
+      font-size: 1.5rem;
+      color: #004080;
+      background: #e3f2fd;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Material Indicators */
+    .material-indicator {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85em;
+      font-weight: bold;
+      margin: 0 5px;
+    }
+    
+    .alloy {
+      background-color: #fff8e1;
+      color: #ff9800;
+      border: 1px solid #ff9800;
+    }
+    
+    .highlight {
+      background-color: #e3f2fd;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border-left: 3px solid #004080;
+      margin: 10px 0;
     }
   </style>
 
@@ -569,8 +564,8 @@
   <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="content">
-      <h1 style="color: white;">Crosby® A-347 Welded Master Link Assembly</h1>
-      <p>Premium welded lifting links engineered for maximum safety and reliability</p>
+      <h1 style="color: white;">Crosby® A-1329 Eye Foundry Hook</h1>
+      <p>Premium forged alloy steel hook engineered for demanding foundry applications</p>
       <a href="#contact" class="cta">Request a Quote</a>
     </div>
   </section>
@@ -578,47 +573,49 @@
   <!-- Product Overview -->
   <section id="overview">
     <div class="container">
-      <h2 class="section-title">Master Links Overview</h2>
-      <p>Our Crosby® A-347 Welded Master Link Assemblies are made of high-strength alloy steel, quenched and tempered for superior performance. Designed with safety as the top priority, these master links are individually proof tested and meet the highest industry standards.</p>
+      <h2 class="section-title">Eye Foundry Hook Overview</h2>
+      <p>The Crosby® A-1329 Eye Foundry Hook is engineered for superior performance in the most demanding industrial environments. Manufactured from forged alloy steel and quenched & tempered for maximum strength, this hook is designed to withstand extreme conditions found in foundry applications.</p>
+      
+      <div class="safety-badge">
+        <i class="fas fa-industry"></i>
+        <h3>Optimized for Foundry Applications</h3>
+        <p>Specially designed to withstand high-heat environments and demanding industrial conditions</p>
+      </div>
       
       <div class="features-list">
         <h3>Key Features</h3>
         <ul>
-          <li>Made of alloy steel - quenched and tempered</li>
-          <li>Individually proof tested to the values shown, with certification</li>
-          <li>5:1 Design Factor</li>
-          <li>Proof tested with 70% inside width special fixtures to avoid localized point loading per EN1677</li>
-          <li>Main link marked with Product Identification Code (PIC) for material traceability</li>
-          <li>Sublinks marked with individual traceability code</li>
-          <li>Type approved to DNV Certification Notes 2.7-1 Offshore Containers</li>
-          <li>100% proof tested and every batch is impact tested</li>
-          <li>3.1 test certification available upon request</li>
-          <li>Engineered flat for use with S-1325A coupler link</li>
-          <li>Fatigue rated to 20,000 cycles at 1.5 times the Working Load Limit</li>
-          <li>Meets/exceeds ASME B30.26 standards</li>
-          <li>Available only in EMEA</li>
+          <li>Forged alloy steel construction – quenched & tempered</li>
+          <li>Proof tested to 2.5× Working Load Limit (WLL) with certification</li>
+          <li>Product Identification Code (PIC), Crosby name, and chain size engraved</li>
+          <li>Suitable for Grade 100 and Grade 80 chain</li>
+          <li>Fatigue rated to 20,000 cycles at 1.5× WLL</li>
+          <li>Can be tip loaded at reduced WLL (operator must ensure load retention)</li>
+          <li>Design Factor: 4:1 for maximum safety</li>
+          <li>Durable construction for long service life in harsh environments</li>
+          <li>Clear working load limit markings for safety compliance</li>
         </ul>
       </div>
       
       <div class="specs-grid">
         <div class="spec-card">
-          <h3><i class="fas fa-certificate"></i> Offshore Approved</h3>
-          <p>Type approved to DNV Certification Notes 2.7-1 Offshore Containers</p>
+          <h3><i class="fas fa-fire"></i> Heat Resistant</h3>
+          <p>Engineered to perform in high-temperature foundry environments</p>
         </div>
         
         <div class="spec-card">
-          <h3><i class="fas fa-tools"></i> Welded Construction</h3>
-          <p>High-strength welded assembly for superior durability</p>
+          <h3><i class="fas fa-certificate"></i> Proof Tested</h3>
+          <p>Individually tested at 2.5× WLL with certification</p>
         </div>
         
         <div class="spec-card">
-          <h3><i class="fas fa-hammer"></i> Fatigue Rated</h3>
-          <p>Rated at 1.5 times the Working Load Limit at 20,000 cycles</p>
+          <h3><i class="fas fa-sync-alt"></i> Fatigue Rated</h3>
+          <p>20,000 cycles at 1.5× Working Load Limit</p>
         </div>
         
         <div class="spec-card">
-          <h3><i class="fas fa-shield-alt"></i> Safety Certified</h3>
-          <p>Meets/exceeds ASME B30.26 standards</p>
+          <h3><i class="fas fa-balance-scale"></i> Dual Loading</h3>
+          <p>Can be loaded at saddle or tip (with reduced capacity)</p>
         </div>
       </div>
     </div>
@@ -628,267 +625,170 @@
   <section id="specs" style="background-color: #f8f9fa;">
     <div class="container">
       <h2 class="section-title">Technical Specifications</h2>
-      <p>All Crosby A-347 Welded Master Link Assemblies feature alloy steel construction with quenched and tempered treatment. Available in multiple sizes with various load capacities.</p>
+      <p>The A-1329 Eye Foundry Hook is available in multiple sizes with varying load capacities. All dimensions are in millimeters (mm) and Working Load Limits (WLL) in metric tons (t).</p>
       
+      <div class="highlight">
+        <h3>Design Factor: 4:1</h3>
+        <p>Engineered for maximum safety in demanding applications</p>
+      </div>
+      
+      <h3 style="text-align: center; margin: 25px 0 15px;">Dimensions and Load Capacities</h3>
       <table class="sling-table">
         <thead>
           <tr>
+            <th>Chain Size (in)</th>
+            <th>Chain Size (mm)</th>
             <th>Stock No.</th>
+            <th>WLL at Saddle (t)</th>
+            <th>WLL at Tip (t)</th>
             <th>Weight (kg)</th>
-            <th>Grade 100 Chain Size (mm)</th>
-            <th>Grade 80 Chain Size (mm)</th>
-            <th>WLL (t)</th>
-            <th>Proof Load (t)</th>
-            <th>A (mm)</th>
             <th>B (mm)</th>
-            <th>C (mm)</th>
             <th>D (mm)</th>
-            <th>E (mm)</th>
-            <th>F (mm)</th>
-            <th>G (mm)</th>
-            <th>Flat Size for S1325A</th>
+            <th>I (mm)</th>
+            <th>K (mm)</th>
+            <th>L (mm)</th>
+            <th>M (mm)</th>
+            <th>N (mm)</th>
+            <th>O (mm)</th>
+            <th>AA (mm)</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>1257755</td>
-            <td>1.1</td>
-            <td>6</td>
-            <td>6</td>
-            <td>3.2</td>
-            <td>8.0</td>
-            <td>13</td>
-            <td>60</td>
-            <td>120</td>
-            <td>13</td>
-            <td>120</td>
-            <td>60</td>
-            <td>6.5</td>
-            <td>6</td>
+            <td>1/4–5/16</td>
+            <td>7–8</td>
+            <td>1026280</td>
+            <td>2.6</td>
+            <td>1.3</td>
+            <td>0.91</td>
+            <td>39.6</td>
+            <td>122.4</td>
+            <td>22.4</td>
+            <td>39.9</td>
+            <td>16.0</td>
+            <td>122.2</td>
+            <td>63.5</td>
+            <td>28.7</td>
+            <td>89</td>
           </tr>
           <tr>
-            <td>1257762</td>
-            <td>1.6</td>
-            <td>6</td>
-            <td>6, 7</td>
-            <td>4.1</td>
+            <td>3/8</td>
+            <td>10</td>
+            <td>1026289</td>
+            <td>4.0</td>
+            <td>2.0</td>
+            <td>1.72</td>
+            <td>52.6</td>
+            <td>147.8</td>
+            <td>33.0</td>
+            <td>47.8</td>
+            <td>20.6</td>
+            <td>139.7</td>
+            <td>76.2</td>
+            <td>35.1</td>
+            <td>102</td>
+          </tr>
+          <tr>
+            <td>1/2</td>
+            <td>13</td>
+            <td>1026297</td>
+            <td>6.8</td>
+            <td>3.4</td>
+            <td>3.27</td>
+            <td>64.3</td>
+            <td>178.8</td>
+            <td>38.1</td>
+            <td>57.2</td>
+            <td>26.2</td>
+            <td>180.6</td>
+            <td>88.9</td>
+            <td>41.4</td>
+            <td>114</td>
+          </tr>
+          <tr>
+            <td>5/8</td>
+            <td>16</td>
+            <td>1026306</td>
             <td>10.3</td>
-            <td>17</td>
-            <td>90</td>
-            <td>160</td>
-            <td>13</td>
-            <td>120</td>
-            <td>60</td>
-            <td>6.5</td>
-            <td>6, 7</td>
+            <td>5.1</td>
+            <td>5.58</td>
+            <td>76.2</td>
+            <td>207.5</td>
+            <td>44.5</td>
+            <td>64.3</td>
+            <td>31.8</td>
+            <td>202.2</td>
+            <td>101.6</td>
+            <td>55.6</td>
+            <td>127</td>
           </tr>
           <tr>
-            <td>1257832</td>
-            <td>1.8</td>
-            <td>6, 7</td>
-            <td>7</td>
-            <td>4.2</td>
-            <td>10.6</td>
-            <td>19</td>
-            <td>90</td>
-            <td>160</td>
-            <td>13</td>
-            <td>120</td>
-            <td>60</td>
-            <td>6.5</td>
-            <td>7, 8</td>
+            <td>3/4</td>
+            <td>18–20</td>
+            <td>1026315</td>
+            <td>16.0</td>
+            <td>8.0</td>
+            <td>10.4</td>
+            <td>104.9</td>
+            <td>245.1</td>
+            <td>55.9</td>
+            <td>86.1</td>
+            <td>50.0</td>
+            <td>273.1</td>
+            <td>127.0</td>
+            <td>61.0</td>
+            <td>165</td>
           </tr>
           <tr>
-            <td>1258058</td>
-            <td>3.3</td>
-            <td>8</td>
-            <td>10</td>
-            <td>7.0</td>
-            <td>17.5</td>
-            <td>22</td>
-            <td>100</td>
-            <td>180</td>
-            <td>17</td>
-            <td>160</td>
-            <td>90</td>
-            <td>8.5</td>
-            <td>10</td>
-          </tr>
-          <tr>
-            <td>1258067</td>
-            <td>4.1</td>
-            <td>8</td>
-            <td>10</td>
-            <td>7.0</td>
-            <td>17.5</td>
-            <td>22</td>
-            <td>145</td>
-            <td>275</td>
-            <td>17</td>
-            <td>160</td>
-            <td>90</td>
-            <td>8.5</td>
-            <td>10</td>
-          </tr>
-          <tr>
-            <td>1258049</td>
-            <td>3.8</td>
-            <td>10</td>
-            <td>10</td>
-            <td>8.5</td>
-            <td>21.2</td>
-            <td>22</td>
-            <td>100</td>
-            <td>180</td>
-            <td>19</td>
-            <td>160</td>
-            <td>90</td>
-            <td>8.5</td>
-            <td>10</td>
-          </tr>
-          <tr>
-            <td>1258076</td>
-            <td>4.6</td>
-            <td>10</td>
-            <td>10</td>
-            <td>8.9</td>
-            <td>22.2</td>
-            <td>25</td>
-            <td>115</td>
-            <td>210</td>
-            <td>19</td>
-            <td>160</td>
-            <td>90</td>
-            <td>8.5</td>
-            <td>10</td>
-          </tr>
-          <tr>
-            <td>1258102</td>
-            <td>5.3</td>
-            <td>10</td>
-            <td>10</td>
-            <td>8.9</td>
-            <td>22.2</td>
-            <td>25</td>
-            <td>145</td>
-            <td>275</td>
-            <td>19</td>
-            <td>160</td>
-            <td>90</td>
-            <td>8.5</td>
-            <td>10</td>
-          </tr>
-          <tr>
-            <td>1258142</td>
-            <td>7.2</td>
-            <td>13</td>
-            <td>13</td>
-            <td>14.5</td>
-            <td>36.2</td>
-            <td>28</td>
-            <td>145</td>
-            <td>275</td>
-            <td>22</td>
-            <td>180</td>
-            <td>100</td>
-            <td>10.5</td>
-            <td>13</td>
-          </tr>
-          <tr>
-            <td>1258182</td>
-            <td>9.9</td>
-            <td>13</td>
-            <td>16</td>
-            <td>17.0</td>
-            <td>42.5</td>
-            <td>32</td>
-            <td>145</td>
-            <td>275</td>
-            <td>25</td>
-            <td>210</td>
-            <td>115</td>
-            <td>13.5</td>
-            <td>16</td>
-          </tr>
-          <tr>
-            <td>1258185</td>
-            <td>12.7</td>
-            <td>16</td>
-            <td>16</td>
-            <td>23.6</td>
-            <td>59.0</td>
-            <td>36</td>
-            <td>155</td>
-            <td>285</td>
-            <td>28</td>
-            <td>190</td>
-            <td>110</td>
-            <td>13.5</td>
-            <td>16</td>
-          </tr>
-          <tr>
-            <td>1258187</td>
+            <td>7/8</td>
+            <td>22–23</td>
+            <td>1026324</td>
+            <td>21.0</td>
+            <td>10.0</td>
             <td>18.4</td>
-            <td>16</td>
-            <td>19, 20</td>
-            <td>28.1</td>
-            <td>70.2</td>
-            <td>40</td>
-            <td>140</td>
-            <td>270</td>
-            <td>32</td>
-            <td>275</td>
-            <td>145</td>
-            <td>16.7</td>
-            <td>-</td>
+            <td>121.2</td>
+            <td>280.2</td>
+            <td>69.1</td>
+            <td>95.0</td>
+            <td>57.9</td>
+            <td>311.2</td>
+            <td>139.7</td>
+            <td>78.0</td>
+            <td>178</td>
           </tr>
           <tr>
-            <td>1258402</td>
-            <td>26.7</td>
-            <td>19, 20</td>
-            <td>22</td>
+            <td>1</td>
+            <td>26</td>
+            <td>1026333</td>
+            <td>27.1</td>
+            <td>13.5</td>
+            <td>23.5</td>
+            <td>135.4</td>
+            <td>302.3</td>
+            <td>71.9</td>
+            <td>99.8</td>
+            <td>65.0</td>
+            <td>339.6</td>
+            <td>152.4</td>
+            <td>84.1</td>
+            <td>191</td>
+          </tr>
+          <tr>
+            <td>1 1/4</td>
+            <td>32</td>
+            <td>1026342</td>
+            <td>41.0</td>
+            <td>20.5</td>
             <td>38.3</td>
-            <td>95.7</td>
-            <td>45</td>
-            <td>180</td>
-            <td>340</td>
-            <td>36</td>
-            <td>285</td>
-            <td>155</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>1258471</td>
-            <td>35.5</td>
-            <td>22, 23</td>
-            <td>26</td>
-            <td>45.0</td>
-            <td>112.5</td>
-            <td>51</td>
-            <td>215</td>
-            <td>390</td>
-            <td>40</td>
-            <td>270</td>
-            <td>140</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>1258491</td>
-            <td>61.1</td>
-            <td>26</td>
-            <td>32</td>
-            <td>67.0</td>
-            <td>167.5</td>
-            <td>55</td>
+            <td>167.9</td>
+            <td>336.6</td>
+            <td>88.9</td>
+            <td>110.0</td>
+            <td>80.0</td>
+            <td>387.4</td>
+            <td>165.1</td>
+            <td>97.5</td>
             <td>203</td>
-            <td>406</td>
-            <td>51</td>
-            <td>390</td>
-            <td>215</td>
-            <td>-</td>
-            <td>-</td>
           </tr>
         </tbody>
       </table>
@@ -896,15 +796,47 @@
       <div class="note">
         <h3><i class="fas fa-exclamation-circle"></i> Important Notes</h3>
         <ul>
-          <li><strong>Design Factor:</strong> 5:1 based on single-leg slings or multiple legs with included angle ≤ 120°</li>
-          <li><strong>Wire Rope & Synthetic Sling Applications:</strong> Require a Design Factor of 5</li>
-          <li><strong>Chain Slings:</strong> Require a 4:1 Design Factor</li>
-          <li><strong>Proof Test Load:</strong> Meets/exceeds ASTM A952(8.1) and ASME B30.9</li>
-          <li><strong>Manufactured Flats:</strong> Not available for links above 32mm (1-1/4")</li>
-          <li><strong>Traceability:</strong> Main link marked with Product Identification Code (PIC) for material traceability, Grade, CE, chain size, and "CG"</li>
-          <li><strong>Sublinks:</strong> Marked with individual traceability code</li>
-          <li><strong>Availability:</strong> Available only in EMEA</li>
+          <li><strong>Material:</strong> Forged alloy steel – quenched & tempered for maximum strength</li>
+          <li><strong>Proof Testing:</strong> Each hook is individually proof tested at 2.5× WLL with certification</li>
+          <li><strong>Fatigue Rating:</strong> Rated for 20,000 cycles at 1.5× WLL</li>
+          <li><strong>Tip Loading:</strong> Can be tip loaded at reduced WLL (operator must ensure load retention)</li>
+          <li><strong>Chain Compatibility:</strong> Suitable for Grade 100 and Grade 80 chain</li>
+          <li><strong>Identification:</strong> Product Identification Code (PIC), Crosby name, and chain size engraved</li>
+          <li><strong>Design Factor:</strong> 4:1 for maximum safety</li>
+          <li><strong>Applications:</strong> Ideal for foundry, industrial, and heavy manufacturing environments</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety Features -->
+  <section id="safety">
+    <div class="container">
+      <h2 class="section-title">Safety Features</h2>
+      <div class="features">
+        <div class="feature-card">
+          <i class="fas fa-industry"></i>
+          <h3>Foundry-Optimized</h3>
+          <p>Specially engineered for high-heat and demanding industrial environments</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-hammer"></i>
+          <h3>Forged Alloy Steel</h3>
+          <p>Quenched & tempered for maximum strength and durability</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-tachometer-alt"></i>
+          <h3>Fatigue Resistance</h3>
+          <p>Rated for 20,000 cycles at 1.5× Working Load Limit</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-clipboard-check"></i>
+          <h3>Proof Tested</h3>
+          <p>Each hook individually tested at 2.5× WLL with certification</p>
+        </div>
       </div>
     </div>
   </section>
@@ -988,8 +920,8 @@
           <h3>Certifications</h3>
           <ul class="footer-links">
             <li><a href="#">ASME B30.26 Certified</a></li>
-            <li><a href="#">DNV Offshore Certified</a></li>
             <li><a href="#">OSHA Compliant</a></li>
+            <li><a href="#">EN1677-3 Compliant</a></li>
             <li><a href="#">ISO Quality Standards</a></li>
           </ul>
         </div>
