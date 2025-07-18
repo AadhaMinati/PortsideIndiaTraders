@@ -4,26 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portside India Traders - Grommet Slings</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Basic Reset */
+    /* Global Styles */
     body, h1, h2, h3, p, ul, li, a, section, header, footer {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-
-    /* Global Styles */
-    body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
       color: #333;
-      background-color: #f8f9fa;
     }
-
+    
     a {
       text-decoration: none;
+      color: #004080;
     }
-
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    
+    section {
+      padding: 40px 0;
+    }
+    
     /* Header & Navigation */
     header {
       background-color: #004080; /* Ocean Blue */
@@ -32,204 +40,407 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
+    
     header .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+    
     .logo {
       display: flex;
       align-items: center;
     }
+    
     .logo img {
-      max-height: 60px;
+      height: 50px;
       margin-right: 15px;
+      background: #fff;
+      padding: 5px;
+      border-radius: 4px;
     }
-    .logo h1 {
+    
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .logo-text h1 {
       font-size: 1.5em;
       margin: 0;
+      color: white;
     }
+    
+    .logo-text span {
+      font-size: 0.8em;
+      color: #ff9800;
+      margin-top: 3px;
+    }
+    
     nav ul {
       list-style: none;
       display: flex;
     }
+    
     nav ul li {
       margin-left: 20px;
     }
+    
     nav ul li a {
       color: #fff;
       font-weight: bold;
-      transition: all 0.3s ease;
+      transition: color 0.3s;
     }
+    
     nav ul li a:hover {
-      color: #ffcc00;
+      color: #ff9800;
     }
-
-    /* Hero Section */
+    
+    /* Hero Section - Solid Color Background */
     .hero {
-      background: linear-gradient(rgba(0, 64, 128, 0.8), rgba(0, 64, 128, 0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23004080"/><path d="M0 50 L100 50 M50 0 L50 100" stroke="%23002c5c" stroke-width="2"/></svg>');
-      background-size: cover;
-      color: #fff;
+      background: linear-gradient(135deg, #004080, #002b5c);
+      color: white;
       text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 80px 20px;
-      position: relative;
     }
+    
     .hero .content {
       max-width: 800px;
-      margin: 0 auto;
     }
+    
     .hero h1 {
-      font-size: 2.8em;
-      margin-bottom: 20px;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+      font-size: 2.8rem;
+      margin-bottom: 15px;
     }
+    
     .hero p {
       font-size: 1.2em;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
+      color: white;
+      opacity: 0.9;
     }
+    
     .hero .cta {
-      background: #ffcc00;
+      background: #fff;
       color: #004080;
       padding: 12px 30px;
-      border-radius: 30px;
+      border-radius: 5px;
       font-weight: bold;
-      display: inline-block;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    .hero .cta:hover {
-      background: #fff;
-      transform: translateY(-3px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-    }
-
-    /* Container */
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px 0;
-    }
-
-    /* Product Intro */
-    .product-intro {
-      background: #fff;
-      padding: 60px 0;
-      text-align: center;
-    }
-    .product-intro h2 {
-      color: #004080;
-      font-size: 2.2em;
-      margin-bottom: 20px;
-    }
-    .intro-content {
-      max-width: 800px;
-      margin: 0 auto;
       font-size: 1.1em;
+      display: inline-block;
+      transition: all 0.3s;
+      margin-top: 20px;
     }
-
-    /* Features Section */
-    .features {
-      background: #f0f5ff;
-      padding: 60px 0;
+    
+    .hero .cta:hover {
+      background: #ff9800;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
+    
+    /* Section Headings */
     .section-title {
       text-align: center;
       color: #004080;
-      margin-bottom: 40px;
-      font-size: 2em;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
     }
-    .features-grid {
+    
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: #ff9800;
+    }
+    
+    /* Features Section */
+    .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
     }
+    
     .feature-card {
       background: #fff;
-      border-radius: 10px;
-      padding: 30px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      transition: all 0.3s ease;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      border-top: 4px solid #004080;
     }
+    
     .feature-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     }
+    
+    .feature-card i {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
     .feature-card h3 {
       color: #004080;
       margin-bottom: 15px;
-      font-size: 1.4em;
     }
-    .feature-card ul {
-      padding-left: 20px;
-      text-align: left;
-    }
-    .feature-card ul li {
-      margin-bottom: 10px;
-      line-height: 1.6;
-    }
-
-    /* Technical Specs */
-    .specs {
-      background: #fff;
-      padding: 60px 0;
-    }
-    .specs-container {
-      overflow-x: auto;
-    }
-    .specs-table {
+    
+    /* Tables */
+    .sling-table {
       width: 100%;
       border-collapse: collapse;
-      margin: 30px 0;
-      min-width: 700px;
+      margin: 20px 0;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      font-size: 0.9rem;
     }
-    .specs-table th {
+    
+    .sling-table th {
       background: #004080;
-      color: #fff;
+      color: white;
       padding: 15px;
-      text-align: left;
+      text-align: center;
+      font-weight: 600;
     }
-    .specs-table td {
+    
+    .sling-table td {
       padding: 12px 15px;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: center;
+    }
+    
+    .sling-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .sling-table tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    
+    .sling-table tr:hover {
+      background-color: #e3f2fd;
+    }
+    
+    /* Notes Section */
+    .note {
+      background: #fff8e1;
+      border-left: 4px solid #ff9800;
+      padding: 25px;
+      border-radius: 5px;
+      margin: 30px 0;
+    }
+    
+    .note h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .note ul {
+      padding-left: 20px;
+    }
+    
+    .note li {
+      margin-bottom: 10px;
+    }
+    
+    /* Contact Section */
+    .contact-card {
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
       border-bottom: 1px solid #eee;
     }
-    .specs-table tr:nth-child(even) {
-      background-color: #f9f9f9;
+    
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
-    .specs-table tr:hover {
-      background-color: #f0f5ff;
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: #e3f2fd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      color: #004080;
+      font-size: 1.2rem;
     }
-
-    /* Construction Section */
-    .construction {
-      background: #f0f5ff;
-      padding: 60px 0;
+    
+    .contact-info {
+      flex: 1;
     }
-    .steps {
+    
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 50px 0 20px;
+      margin-top: 50px;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    
+    .footer-column {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 30px;
+      padding: 0 15px;
+    }
+    
+    .footer-column h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: #ff9800;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+      color: #ddd;
+      transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: #ff9800;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+    }
+    
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .sling-table {
+        display: block;
+        overflow-x: auto;
+      }
+      
+      header .container {
+        flex-direction: column;
+      }
+      
+      nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      nav ul li {
+        margin: 5px 10px;
+      }
+      
+      .contact-item {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+    
+    /* Product Highlights */
+    .product-highlights {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+    
+    .highlight-item {
+      text-align: center;
+      width: 200px;
+      padding: 15px;
+    }
+    
+    .highlight-icon {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    
+    /* Construction Cards */
+    .construction-steps {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
       margin-top: 30px;
     }
+    
     .step-card {
       background: #fff;
-      border-radius: 10px;
+      border-radius: 8px;
       padding: 25px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      position: relative;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
       border-top: 4px solid #004080;
+      position: relative;
     }
+    
+    .step-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
     .step-number {
       position: absolute;
       top: -20px;
       left: 20px;
       background: #004080;
-      color: #fff;
+      color: white;
       width: 40px;
       height: 40px;
       border-radius: 50%;
@@ -237,76 +448,54 @@
       align-items: center;
       justify-content: center;
       font-weight: bold;
-      font-size: 1.2em;
-    }
-
-    /* Contact Section */
-    .contact {
-      background: #fff;
-      padding: 60px 0;
-      text-align: center;
-    }
-    .contact-container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 30px;
-      background: #f0f5ff;
-      border-radius: 10px;
-    }
-    .contact-info {
-      margin: 20px 0;
-    }
-    .contact-info p {
-      margin: 10px 0;
-      font-size: 1.1em;
-    }
-
-    /* Footer */
-    footer {
-      background: #333;
-      color: #fff;
-      text-align: center;
-      padding: 30px 0;
-    }
-    .footer-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .copyright {
-      margin-top: 20px;
-    }
-
-    /* Mobile Responsiveness */
-    @media screen and (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.2em;
-      }
-      header .container {
-        flex-direction: column;
-      }
-      nav ul {
-        margin-top: 20px;
-      }
-      nav ul li {
-        margin: 0 10px;
-      }
+      font-size: 1.2rem;
     }
     
-    @media screen and (max-width: 480px) {
-      .hero {
-        padding: 60px 20px;
-      }
-      .hero h1 {
-        font-size: 1.8em;
-      }
-      nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      nav ul li {
-        margin: 5px 10px;
-      }
+    .step-card h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #ff9800;
+    }
+    
+    /* Features List */
+    .features-list {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 25px;
+      margin: 30px 0;
+    }
+    
+    .features-list h3 {
+      color: #004080;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #004080;
+      padding-bottom: 10px;
+    }
+    
+    .features-list ul {
+      padding-left: 20px;
+    }
+    
+    .features-list li {
+      margin-bottom: 10px;
+      padding-left: 10px;
+    }
+    
+    .features-list li:before {
+      content: "✓";
+      color: #004080;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    
+    /* Info Panel */
+    .info-panel {
+      background: #e3f2fd;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 30px 0;
+      border-left: 4px solid #004080;
     }
   </style>
 
@@ -322,53 +511,81 @@
 
 </head>
 <body>
-
   <!-- Header -->
   <header>
     <div class="container">
       <div class="logo">
-        <img src="Images/FinalLogo.png" alt="Portside India Traders Logo" />
-        <h1>Portside India Traders</h1>
+        <img src="Images/FinalLogo.png" alt="Portside India Traders Logo">
+        <div class="logo-text">
+          <h1>Portside India Traders</h1>
+          <span>Strength that Anchors Your Success</span>
+        </div>
       </div>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="Product1.html">Products</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="container content">
-      <h1>Grommet Slings</h1>
+  <section class="hero" id="home">
+    <div class="content">
+      <h1 style="color: white;">Grommet Slings</h1>
       <p>High-strength endless slings for demanding lifting applications</p>
       <a href="#contact" class="cta">Request Specifications</a>
     </div>
   </section>
 
-  <!-- Product Intro -->
-  <section class="product-intro">
+  <!-- Product Overview -->
+  <section id="overview">
     <div class="container">
-      <h2>Premium Quality Grommet Slings</h2>
-      <div class="intro-content">
-        <p>Portside India Traders offers superior grommet slings engineered for maximum strength and durability. Manufactured from one continuous length of strand or wire rope, our grommet slings provide exceptional breaking strength beyond the limits of single part ropes.</p>
-        <p>With their unique construction requiring only one tuck-in point, grommet slings can be fabricated in very short circumferences, making them ideal for specialized lifting applications across maritime, construction, and industrial sectors.</p>
+      <h2 class="section-title">Premium Quality Grommet Slings</h2>
+      <p>Portside India Traders offers superior grommet slings engineered for maximum strength and durability. Manufactured from one continuous length of strand or wire rope, our grommet slings provide exceptional breaking strength beyond the limits of single part ropes.</p>
+      
+      <div class="product-highlights">
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-infinity"></i>
+          </div>
+          <h3>Endless Design</h3>
+          <p>One continuous length for maximum strength</p>
+        </div>
+        
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>High Strength</h3>
+          <p>Breaking strength beyond single part ropes</p>
+        </div>
+        
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-compress-alt"></i>
+          </div>
+          <h3>Compact Size</h3>
+          <p>Can be fabricated in short circumferences</p>
+        </div>
+        
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3>Specialized</h3>
+          <p>Ideal for demanding lifting applications</p>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section class="features">
-    <div class="container">
-      <h2 class="section-title">Key Features & Applications</h2>
-      <div class="features-grid">
+      
+      <div class="features">
         <div class="feature-card">
+          <i class="fas fa-drafting-compass"></i>
           <h3>Construction Advantages</h3>
-          <ul>
+          <ul style="text-align: left;">
             <li>Made from one continuous length of strand or wire rope</li>
             <li>Requires only one tuck-in point (vs. six for endless slings)</li>
             <li>6/1 construction for maximum breaking strength</li>
@@ -377,8 +594,9 @@
         </div>
         
         <div class="feature-card">
+          <i class="fas fa-industry"></i>
           <h3>Manufacturing Methods</h3>
-          <ul>
+          <ul style="text-align: left;">
             <li><strong>Method A:</strong> Outer strand unlaid from 6/1 rope specimen</li>
             <li><strong>Method B:</strong> Unlaying from 6/4 rope specimen</li>
             <li><strong>Method C:</strong> Virgin strand (preformed or post formed)</li>
@@ -387,8 +605,9 @@
         </div>
         
         <div class="feature-card">
+          <i class="fas fa-ruler"></i>
           <h3>Technical Specifications</h3>
-          <ul>
+          <ul style="text-align: left;">
             <li>Spliced grommet requires strand length ≈7.5× perimeter</li>
             <li>Streamline splicing requires length ≈4× effective length</li>
             <li>Ideal where high ultimate breaking strength is required</li>
@@ -400,126 +619,125 @@
   </section>
 
   <!-- Technical Specs -->
-  <section id="specs">
+  <section id="specs" style="background-color: #f8f9fa;">
     <div class="container">
-      <div class="section-title">
-        <h2>Technical Specifications</h2>
-        <p>Performance data for our Flemish Eye Slings</p>
+      <h2 class="section-title">Technical Specifications</h2>
+      
+      <div class="info-panel">
+        <p><strong>Performance data for our Grommet Slings</strong></p>
       </div>
       
-      <div class="specs-container">
-        <table class="specs-table">
-          <thead>
-            <tr>
-              <th>Nominal of Single Part</th>
-              <th>Nominal Diameter (mm)</th>
-              <th>Component Ropes (mm)</th>
-              <th>Breaking Load (tonnes)</th>
-              <th>Breaking Load (tons 200 lb)</th>
-              <th>Breaking Load (tons 2240 lb)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>2"</td>
-              <td>52</td>
-              <td>18</td>
-              <td>211</td>
-              <td>233</td>
-              <td>208</td>
-            </tr>
-            <tr>
-              <td>2 ½"</td>
-              <td>64</td>
-              <td>22</td>
-              <td>316</td>
-              <td>348</td>
-              <td>311</td>
-            </tr>
-            <tr>
-              <td>3"</td>
-              <td>76</td>
-              <td>26</td>
-              <td>442</td>
-              <td>486</td>
-              <td>434</td>
-            </tr>
-            <tr>
-              <td>3 ½"</td>
-              <td>89</td>
-              <td>30</td>
-              <td>589</td>
-              <td>650</td>
-              <td>580</td>
-            </tr>
-            <tr>
-              <td>4"</td>
-              <td>102</td>
-              <td>34</td>
-              <td>756</td>
-              <td>833</td>
-              <td>744</td>
-            </tr>
-            <tr>
-              <td>4 ½"</td>
-              <td>115</td>
-              <td>38</td>
-              <td>944</td>
-              <td>1040</td>
-              <td>930</td>
-            </tr>
-            <tr>
-              <td>5"</td>
-              <td>125</td>
-              <td>42</td>
-              <td>1152</td>
-              <td>1268</td>
-              <td>1132</td>
-            </tr>
-            <tr>
-              <td>5 ½"</td>
-              <td>140</td>
-              <td>48</td>
-              <td>1509</td>
-              <td>1668</td>
-              <td>1489</td>
-            </tr>
-            <tr>
-              <td>6"</td>
-              <td>152</td>
-              <td>52</td>
-              <td>1775</td>
-              <td>1954</td>
-              <td>1744</td>
-            </tr>
-            <tr>
-              <td>6 ½"</td>
-              <td>165</td>
-              <td>58</td>
-              <td>2030</td>
-              <td>2262</td>
-              <td>2020</td>
-            </tr>
-            <tr>
-              <td>7"</td>
-              <td>180</td>
-              <td>60</td>
-              <td>2356</td>
-              <td>2593</td>
-              <td>2315</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <table class="sling-table">
+        <thead>
+          <tr>
+            <th>Nominal of Single Part</th>
+            <th>Nominal Diameter (mm)</th>
+            <th>Component Ropes (mm)</th>
+            <th>Breaking Load (tonnes)</th>
+            <th>Breaking Load (tons 200 lb)</th>
+            <th>Breaking Load (tons 2240 lb)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2"</td>
+            <td>52</td>
+            <td>18</td>
+            <td>211</td>
+            <td>233</td>
+            <td>208</td>
+          </tr>
+          <tr>
+            <td>2 ½"</td>
+            <td>64</td>
+            <td>22</td>
+            <td>316</td>
+            <td>348</td>
+            <td>311</td>
+          </tr>
+          <tr>
+            <td>3"</td>
+            <td>76</td>
+            <td>26</td>
+            <td>442</td>
+            <td>486</td>
+            <td>434</td>
+          </tr>
+          <tr>
+            <td>3 ½"</td>
+            <td>89</td>
+            <td>30</td>
+            <td>589</td>
+            <td>650</td>
+            <td>580</td>
+          </tr>
+          <tr>
+            <td>4"</td>
+            <td>102</td>
+            <td>34</td>
+            <td>756</td>
+            <td>833</td>
+            <td>744</td>
+          </tr>
+          <tr>
+            <td>4 ½"</td>
+            <td>115</td>
+            <td>38</td>
+            <td>944</td>
+            <td>1040</td>
+            <td>930</td>
+          </tr>
+          <tr>
+            <td>5"</td>
+            <td>125</td>
+            <td>42</td>
+            <td>1152</td>
+            <td>1268</td>
+            <td>1132</td>
+          </tr>
+          <tr>
+            <td>5 ½"</td>
+            <td>140</td>
+            <td>48</td>
+            <td>1509</td>
+            <td>1668</td>
+            <td>1489</td>
+          </tr>
+          <tr>
+            <td>6"</td>
+            <td>152</td>
+            <td>52</td>
+            <td>1775</td>
+            <td>1954</td>
+            <td>1744</td>
+          </tr>
+          <tr>
+            <td>6 ½"</td>
+            <td>165</td>
+            <td>58</td>
+            <td>2030</td>
+            <td>2262</td>
+            <td>2020</td>
+          </tr>
+          <tr>
+            <td>7"</td>
+            <td>180</td>
+            <td>60</td>
+            <td>2356</td>
+            <td>2593</td>
+            <td>2315</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
   <!-- Construction Section -->
-  <section class="construction">
+  <section id="construction" style="background-color: #e6f0ff;">
     <div class="container">
       <h2 class="section-title">Construction & Finishing</h2>
       
-      <div class="steps">
+      <div class="construction-steps">
         <div class="step-card">
           <div class="step-number">1</div>
           <h3>Method of Tucking</h3>
@@ -541,17 +759,76 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
+  <!-- Features Section -->
+  <section id="features">
     <div class="container">
-      <h2 class="section-title">Contact Us for Grommet Slings</h2>
-      <div class="contact-container">
-        <p>Get detailed specifications, pricing, or request a custom quote for your specific requirements.</p>
+      <h2 class="section-title">Key Features & Applications</h2>
+      
+      <div class="features-list">
+        <h3>Construction Advantages</h3>
+        <ul>
+          <li>Made from one continuous length of strand or wire rope</li>
+          <li>Requires only one tuck-in point (vs. six for endless slings)</li>
+          <li>6/1 construction for maximum breaking strength</li>
+          <li>Can be fabricated in very short circumferences</li>
+        </ul>
+      </div>
+      
+      <div class="features-list">
+        <h3>Manufacturing Methods</h3>
+        <ul>
+          <li><strong>Method A:</strong> Outer strand unlaid from 6/1 rope specimen</li>
+          <li><strong>Method B:</strong> Unlaying from 6/4 rope specimen</li>
+          <li><strong>Method C:</strong> Virgin strand (preformed or post formed)</li>
+          <li>Preformed lay maintained during construction</li>
+        </ul>
+      </div>
+      
+      <div class="features-list">
+        <h3>Technical Specifications</h3>
+        <ul>
+          <li>Spliced grommet requires strand length ≈7.5× perimeter</li>
+          <li>Streamline splicing requires length ≈4× effective length</li>
+          <li>Ideal where high ultimate breaking strength is required</li>
+          <li>Superior to single part rope strength limits</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <p><a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
+          </div>
+        </div>
         
-        <div class="contact-info">
-          <p>Email: <a href="mailto:sales@portsideindia.com">sales@portsideindia.com</a></p>
-          <p>Phone: +91 93071 04214</p>
-          <p>Address: I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Phone</h3>
+            <p>+91 93071 04214</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-info">
+            <h3>Address</h3>
+            <p>I-WING GURUPREM SOCIETY KATRAP, BADALPUR, MUMBAI SUBURBS, 421503</p>
+          </div>
         </div>
       </div>
     </div>
@@ -559,14 +836,57 @@
 
   <!-- Footer -->
   <footer>
-    <div class="container footer-content">
-      <div class="logo">
-        <img src="Images/FinalLogo.png" alt="Portside India Traders Logo" style="max-height: 50px;" />
-        <h1>Portside India Traders</h1>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Portside India Traders</h3>
+          <p>Providing premium maritime lifting equipment engineered for safety and reliability since our founding.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="WebbingSlings.html">Webbing Slings</a></li>
+            <li><a href="RoundSlings2.html">Round Slings</a></li>
+            <li><a href="SinglePartSlings.html">Single Part Slings</a></li>
+            <li><a href="MultipleLegSlings.html">Multiple-Leg Slings</a></li>
+            <li><a href="GrommetSlings.html">Grommet Slings</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="Product1.html">All Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
       </div>
-      <p class="copyright">&copy; 2025 Portside India Traders. All Rights Reserved.</p>
+      
+      <div class="copyright">
+        <p>&copy; 2025 Portside India Traders. All Rights Reserved.</p>
+      </div>
     </div>
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Smooth scrolling for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
